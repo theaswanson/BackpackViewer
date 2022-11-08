@@ -2,9 +2,11 @@ import { ItemResponse } from "./models/ItemResponse";
 
 const baseUrl = 'https://localhost:7245';
 
-export async function getItems(): Promise<ItemResponse[]> {
+export async function getItems(useMockResponse: boolean): Promise<ItemResponse[]> {
 	try {
-		const response = await fetch(`${baseUrl}/items`);
+		const response = await fetch(`${baseUrl}/items?` + new URLSearchParams({
+			useMockResponse: useMockResponse ? 'true' : 'false'
+		}));
 
 		if (!response.ok) {
 			throw new Error(`HTTP error: ${response.status} ${response.statusText}`);

@@ -1,6 +1,10 @@
 using BackpackViewer;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+{
+    Args = args,
+    WebRootPath = "www"
+});
 
 // Add services to the container.
 
@@ -45,3 +49,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+

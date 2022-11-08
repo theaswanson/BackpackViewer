@@ -1,0 +1,11 @@
+.Item {
+  border: 1px black solid;
+}
+
+.Item p {
+  font-size: smaller;
+}
+
+.untradable {
+  background-color: rgba(255, 0, 0, 0.2);
+}

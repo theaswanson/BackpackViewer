@@ -4,4 +4,5 @@ export interface ItemResponse {
   type: string;
   quantity: number;
   iconUrl: string;
+  tradable?: boolean;
 }
