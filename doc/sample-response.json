@@ -1,0 +1,2681 @@
+{
+	"assets": [
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "12045506339",
+			"classid": "5564",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "9996764909",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "8384093914",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "11548540187",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "11548540203",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "5828843588",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "12045506494",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "12045506781",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "12045506983",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "12045507890",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "12045507491",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "6935067537",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "8044042283",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "7983428198",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "7983428178",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "12045507670",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "9188169508",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "9188169619",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "9188169607",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "7983428138",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "9188169582",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "9188169556",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "7441968035",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "10236086997",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "7441968049",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "7441968064",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "7441968077",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "7441968090",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "9188169538",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "9996764967",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "9996764943",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "9996764929",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "9996764895",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "11548540123",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "8640746803",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "10236086991",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "10236086986",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "6244532140",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "10236086976",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "10236086967",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "11548540136",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "11548540146",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "8640746775",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "10236086960",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "8640746722",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "11548540159",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "11548540172",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "7983428160",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "12045507213",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "8384094037",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "10236086911",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "10236086892",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "8384094020",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "8384093986",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "8384093951",
+			"classid": "2674",
+			"instanceid": "11040547",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "7399635198",
+			"classid": "3051917503",
+			"instanceid": "0",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "7301730083",
+			"classid": "3051917503",
+			"instanceid": "0",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "8172792624",
+			"classid": "3554736088",
+			"instanceid": "11040545",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "8181348869",
+			"classid": "3554736088",
+			"instanceid": "11040545",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "8263938034",
+			"classid": "3554730729",
+			"instanceid": "0",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "8178522179",
+			"classid": "3554736088",
+			"instanceid": "11040545",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "9346104486",
+			"classid": "4019192598",
+			"instanceid": "0",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "9450008560",
+			"classid": "4019192598",
+			"instanceid": "0",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "9402217176",
+			"classid": "4019192598",
+			"instanceid": "0",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "9336641247",
+			"classid": "4019192598",
+			"instanceid": "0",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "10757553257",
+			"classid": "4585823175",
+			"instanceid": "0",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "10855319646",
+			"classid": "4585823175",
+			"instanceid": "0",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "10885016984",
+			"classid": "4585823175",
+			"instanceid": "0",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "10973635409",
+			"classid": "4585823175",
+			"instanceid": "0",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "10751405626",
+			"classid": "4585823175",
+			"instanceid": "0",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "11474839747",
+			"classid": "4585823175",
+			"instanceid": "0",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "4192811706",
+			"classid": "1336074014",
+			"instanceid": "1387838117",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "4409313041",
+			"classid": "1442478139",
+			"instanceid": "1642442260",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "3911968028",
+			"classid": "1336074012",
+			"instanceid": "1342112325",
+			"amount": "1"
+		},
+		{
+			"appid": 440,
+			"contextid": "2",
+			"assetid": "10744122512",
+			"classid": "2770487944",
+			"instanceid": "0",
+			"amount": "1"
+		}
+	],
+	"descriptions": [
+		{
+			"appid": 440,
+			"classid": "5564",
+			"instanceid": "11040547",
+			"currency": 0,
+			"background_color": "3C352E",
+			"icon_url": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEbZQsUYhTkhzJWhsO0Mv6NGucF1YJlscMEgDdvxVYsMLPkMmFjI1OSUvMHDPBp9lu0CnVluZQxA9Gwp-hIOVK4sMMNWF4",
+			"icon_url_large": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEbZQsUYhTkhzJWhsO0Mv6NGucF1YJlscMEgDdvxVYsMLPkMmFjI1OSUvMHDPBp9lu0CnVluZQxA9Gwp-hIOVK4sMMNWF4",
+			"tradable": 1,
+			"actions": [
+				{
+					"link": "http://wiki.teamfortress.com/scripts/itemredirect.php?id=5001&lang=en_US",
+					"name": "Item Wiki Page..."
+				}
+			],
+			"name": "Reclaimed Metal",
+			"name_color": "7D6D00",
+			"type": "Level 2 Craft Item",
+			"market_name": "Reclaimed Metal",
+			"market_hash_name": "Reclaimed Metal",
+			"commodity": 0,
+			"market_tradable_restriction": 7,
+			"market_marketable_restriction": 0,
+			"marketable": 0,
+			"tags": [
+				{
+					"category": "Quality",
+					"internal_name": "Unique",
+					"localized_category_name": "Quality",
+					"localized_tag_name": "Unique",
+					"color": "7D6D00"
+				},
+				{
+					"category": "Type",
+					"internal_name": "Craft Item",
+					"localized_category_name": "Type",
+					"localized_tag_name": "Craft Item"
+				}
+			]
+		},
+		{
+			"appid": 440,
+			"classid": "2674",
+			"instanceid": "11040547",
+			"currency": 0,
+			"background_color": "3C352E",
+			"icon_url": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEbZQsUYhTkhzJWhsO1Mv6NGucF1Ygzt8ZQijJukFMiMrbhYDEwI1yRVKNfD6xorQ3qW3Jr6546DNPuou9IOVK4p4kWJaA",
+			"icon_url_large": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEbZQsUYhTkhzJWhsO1Mv6NGucF1Ygzt8ZQijJukFMiMrbhYDEwI1yRVKNfD6xorQ3qW3Jr6546DNPuou9IOVK4p4kWJaA",
+			"tradable": 1,
+			"actions": [
+				{
+					"link": "http://wiki.teamfortress.com/scripts/itemredirect.php?id=5002&lang=en_US",
+					"name": "Item Wiki Page..."
+				}
+			],
+			"name": "Refined Metal",
+			"name_color": "7D6D00",
+			"type": "Level 3 Craft Item",
+			"market_name": "Refined Metal",
+			"market_hash_name": "Refined Metal",
+			"commodity": 0,
+			"market_tradable_restriction": 7,
+			"market_marketable_restriction": 0,
+			"marketable": 0,
+			"tags": [
+				{
+					"category": "Quality",
+					"internal_name": "Unique",
+					"localized_category_name": "Quality",
+					"localized_tag_name": "Unique",
+					"color": "7D6D00"
+				},
+				{
+					"category": "Type",
+					"internal_name": "Craft Item",
+					"localized_category_name": "Type",
+					"localized_tag_name": "Craft Item"
+				}
+			]
+		},
+		{
+			"appid": 440,
+			"classid": "3051917503",
+			"instanceid": "0",
+			"currency": 0,
+			"background_color": "3C352E",
+			"icon_url": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEDbQsdUgznvTYR2Jm-MvGNG-U_l9sn4pUbim88kgAtY-XnNWdiJFKTAqUIWaFsoVC7DH4xvsQ6BtW0ou1VLQi5vZyGbedz97Kp4g",
+			"icon_url_large": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEDbQsdUgznvTYR2Jm-MvGNG-U_l9sn4pUbim88kgAtY-XnNWdiJFKTAqUIWaFsoVC7DH4xvsQ6BtW0ou1VLQi5vZyGbedz97Kp4g",
+			"descriptions": [
+				{
+					"value": "This Case is locked and requires a\nViolet Vermin Key to open.\n\nContains a community made item\nfrom the Violet Vermin Collection."
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Contents may be Unusual with a Halloween 2018 effect",
+					"color": "7ea9d1"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Violet Vermin Collection"
+				},
+				{
+					"value": "    Lucky Cat Hat",
+					"color": "eb4b4b"
+				},
+				{
+					"value": "    Terror-antula",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    Defragmenting Hard Hat 17%",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    Mr. Quackers",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    The Tank Top",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Gaelic Glutton",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Athenian Attire",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Pyro in Chinatown",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Dressperado",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Aim Assistant",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Mini-Engy",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Deadbeats",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Mann-O-War",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Hephaistos' Handcraft",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Olympic Leapers",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Vampire Vanquisher",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Highway Star",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Bandit's Boots",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Murderer's Motif",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    The Arachno-Arsonist",
+					"color": "4b69ff"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Exclusive Bonus Item(s):"
+				},
+				{
+					"value": "Crocodile Mun-Dee",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Scoper's Scales",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Dell in the Shell",
+					"color": "6F6A63"
+				},
+				{
+					"value": "A Shell of a Mann",
+					"color": "6F6A63"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Global Unusual Effect(s)"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Eerie Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Eerie Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Soulful Slice",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Horsemann's Hack",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Horsemann's Hack",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Forever And Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Cursed Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Wicked Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Spectral Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Global Bonus Item(s)"
+				},
+				{
+					"value": "Paint Cans!\nTaunt Unusualifiers!\nMvM Tickets!\nAnd TF2 Tools!"
+				},
+				{
+					"value": "Inspect for full list of unusual effects and more details"
+				}
+			],
+			"tradable": 1,
+			"actions": [
+				{
+					"link": "http://wiki.teamfortress.com/scripts/itemredirect.php?id=5894&lang=en_US",
+					"name": "Item Wiki Page..."
+				},
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20S%owner_steamid%A%assetid%D12443306913601826750",
+					"name": "Inspect in Game..."
+				}
+			],
+			"name": "Violet Vermin Case",
+			"name_color": "7D6D00",
+			"type": "",
+			"market_name": "Violet Vermin Case",
+			"market_hash_name": "Violet Vermin Case",
+			"market_actions": [
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20M%listingid%A%assetid%D12443306913601826750",
+					"name": "Inspect in Game..."
+				}
+			],
+			"commodity": 1,
+			"market_tradable_restriction": 7,
+			"market_marketable_restriction": 0,
+			"marketable": 1,
+			"tags": [
+				{
+					"category": "Quality",
+					"internal_name": "Unique",
+					"localized_category_name": "Quality",
+					"localized_tag_name": "Unique",
+					"color": "7D6D00"
+				},
+				{
+					"category": "Type",
+					"internal_name": "Supply Crate",
+					"localized_category_name": "Type",
+					"localized_tag_name": "Crate"
+				},
+				{
+					"category": "Collection",
+					"internal_name": "halloween2018_collection_name",
+					"localized_category_name": "Collection",
+					"localized_tag_name": "Violet Vermin Collection"
+				}
+			]
+		},
+		{
+			"appid": 440,
+			"classid": "3554736088",
+			"instanceid": "11040545",
+			"currency": 0,
+			"background_color": "3C352E",
+			"icon_url": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEDbQsdUgznvTYR2Jm_MvGNG-U_l9sn4pUbjWE9yFMuZOa3MWNkdlaVVKEGDPBt9g29XiVmsMY1AdW38rgFfQ_qtJyGbec73J9DDg",
+			"icon_url_large": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEDbQsdUgznvTYR2Jm_MvGNG-U_l9sn4pUbjWE9yFMuZOa3MWNkdlaVVKEGDPBt9g29XiVmsMY1AdW38rgFfQ_qtJyGbec73J9DDg",
+			"descriptions": [
+				{
+					"value": "This Case is locked and requires a\nSpooky Spoils Key to open.\n\nContains a community made item\nfrom the Spooky Spoils Collection."
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Contents may be Unusual with a Halloween 2019 effect",
+					"color": "7ea9d1"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Spooky Spoils Collection"
+				},
+				{
+					"value": "    Pyr'o Lantern",
+					"color": "eb4b4b"
+				},
+				{
+					"value": "    Mister Bones",
+					"color": "eb4b4b"
+				},
+				{
+					"value": "    Head of the Dead",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    Elizabeth the Third",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    The Trick Stabber",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    Racc Mann",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    Madmann's Muzzle",
+					"color": "8847ff"
+				},
+				{
+					"value": "    The Horrible Horns",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Skullbrero",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Soviet Strongmann",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Voodoo Vizier",
+					"color": "8847ff"
+				},
+				{
+					"value": "    El Zapateador",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Bat Hat",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Bread Biter",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Derangement Garment",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    El Mostacho",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Candy Cranium",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Convict Cap",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Pocket Halloween Boss",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Party Poncho",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Fuel Injector",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    BINOCULUS!",
+					"color": "4b69ff"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Exclusive Bonus Item(s):"
+				},
+				{
+					"value": "Pyro Shark",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Avian Amante",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Eingineer",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Remorseless Raptor",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Wild Whip",
+					"color": "6F6A63"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Global Unusual Effect(s)"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Eerie Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Eerie Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Soulful Slice",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Horsemann's Hack",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Horsemann's Hack",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Forever And Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Cursed Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Wicked Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Spectral Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Global Bonus Item(s)"
+				},
+				{
+					"value": "Paint Cans!\nTaunt Unusualifiers!\nMvM Tickets!\nAnd TF2 Tools!"
+				},
+				{
+					"value": "Inspect for full list of unusual effects and more details"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "( Not Tradable or Marketable )"
+				}
+			],
+			"tradable": 0,
+			"actions": [
+				{
+					"link": "http://wiki.teamfortress.com/scripts/itemredirect.php?id=5905&lang=en_US",
+					"name": "Item Wiki Page..."
+				},
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20S%owner_steamid%A%assetid%D172805670176361487",
+					"name": "Inspect in Game..."
+				}
+			],
+			"name": "Spooky Spoils Case",
+			"name_color": "7D6D00",
+			"type": "",
+			"market_name": "Spooky Spoils Case",
+			"market_hash_name": "Spooky Spoils Case",
+			"market_actions": [
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20M%listingid%A%assetid%D172805670176361487",
+					"name": "Inspect in Game..."
+				}
+			],
+			"commodity": 1,
+			"market_tradable_restriction": 7,
+			"market_marketable_restriction": 0,
+			"marketable": 0,
+			"tags": [
+				{
+					"category": "Quality",
+					"internal_name": "Unique",
+					"localized_category_name": "Quality",
+					"localized_tag_name": "Unique",
+					"color": "7D6D00"
+				},
+				{
+					"category": "Type",
+					"internal_name": "Supply Crate",
+					"localized_category_name": "Type",
+					"localized_tag_name": "Crate"
+				},
+				{
+					"category": "Collection",
+					"internal_name": "halloween2019_collection_name",
+					"localized_category_name": "Collection",
+					"localized_tag_name": "Spooky Spoils Collection"
+				}
+			]
+		},
+		{
+			"appid": 440,
+			"classid": "3554730729",
+			"instanceid": "0",
+			"currency": 0,
+			"background_color": "3C352E",
+			"icon_url": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEDbQsdUgznvTYR2Jm_MvGNG-U_l9sn4pUbjWE9yFMuZOa3MWNkdlaVVKEGDPBt9g29XiVmsMY1AdW38rgFfQ_qtJyGbec73J9DDg",
+			"icon_url_large": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEDbQsdUgznvTYR2Jm_MvGNG-U_l9sn4pUbjWE9yFMuZOa3MWNkdlaVVKEGDPBt9g29XiVmsMY1AdW38rgFfQ_qtJyGbec73J9DDg",
+			"descriptions": [
+				{
+					"value": "This Case is locked and requires a\nSpooky Spoils Key to open.\n\nContains a community made item\nfrom the Spooky Spoils Collection."
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Contents may be Unusual with a Halloween 2019 effect",
+					"color": "7ea9d1"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Spooky Spoils Collection"
+				},
+				{
+					"value": "    Pyr'o Lantern",
+					"color": "eb4b4b"
+				},
+				{
+					"value": "    Mister Bones",
+					"color": "eb4b4b"
+				},
+				{
+					"value": "    Head of the Dead",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    Elizabeth the Third",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    The Trick Stabber",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    Racc Mann",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    Madmann's Muzzle",
+					"color": "8847ff"
+				},
+				{
+					"value": "    The Horrible Horns",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Skullbrero",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Soviet Strongmann",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Voodoo Vizier",
+					"color": "8847ff"
+				},
+				{
+					"value": "    El Zapateador",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Bat Hat",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Bread Biter",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Derangement Garment",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    El Mostacho",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Candy Cranium",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Convict Cap",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Pocket Halloween Boss",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Party Poncho",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Fuel Injector",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    BINOCULUS!",
+					"color": "4b69ff"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Exclusive Bonus Item(s):"
+				},
+				{
+					"value": "Pyro Shark",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Avian Amante",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Eingineer",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Remorseless Raptor",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Wild Whip",
+					"color": "6F6A63"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Global Unusual Effect(s)"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Eerie Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Eerie Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Soulful Slice",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Horsemann's Hack",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Horsemann's Hack",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Forever And Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Cursed Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Wicked Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Spectral Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Global Bonus Item(s)"
+				},
+				{
+					"value": "Paint Cans!\nTaunt Unusualifiers!\nMvM Tickets!\nAnd TF2 Tools!"
+				},
+				{
+					"value": "Inspect for full list of unusual effects and more details"
+				}
+			],
+			"tradable": 1,
+			"actions": [
+				{
+					"link": "http://wiki.teamfortress.com/scripts/itemredirect.php?id=5905&lang=en_US",
+					"name": "Item Wiki Page..."
+				},
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20S%owner_steamid%A%assetid%D903895123942534789",
+					"name": "Inspect in Game..."
+				}
+			],
+			"name": "Spooky Spoils Case",
+			"name_color": "7D6D00",
+			"type": "",
+			"market_name": "Spooky Spoils Case",
+			"market_hash_name": "Spooky Spoils Case",
+			"market_actions": [
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20M%listingid%A%assetid%D903895123942534789",
+					"name": "Inspect in Game..."
+				}
+			],
+			"commodity": 1,
+			"market_tradable_restriction": 7,
+			"market_marketable_restriction": 0,
+			"marketable": 1,
+			"tags": [
+				{
+					"category": "Quality",
+					"internal_name": "Unique",
+					"localized_category_name": "Quality",
+					"localized_tag_name": "Unique",
+					"color": "7D6D00"
+				},
+				{
+					"category": "Type",
+					"internal_name": "Supply Crate",
+					"localized_category_name": "Type",
+					"localized_tag_name": "Crate"
+				},
+				{
+					"category": "Collection",
+					"internal_name": "halloween2019_collection_name",
+					"localized_category_name": "Collection",
+					"localized_tag_name": "Spooky Spoils Collection"
+				}
+			]
+		},
+		{
+			"appid": 440,
+			"classid": "4019192598",
+			"instanceid": "0",
+			"currency": 0,
+			"background_color": "3C352E",
+			"icon_url": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEDbQsdUgznvTYR2Jq2MvGNG-U_l9sn4pUb3W8-yVl4MeW0YDVhcFLBUfUNXa07rQ65CH9rvJNlBoHl8-1TLQjotZyGbeeDLYec-g",
+			"icon_url_large": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEDbQsdUgznvTYR2Jq2MvGNG-U_l9sn4pUb3W8-yVl4MeW0YDVhcFLBUfUNXa07rQ65CH9rvJNlBoHl8-1TLQjotZyGbeeDLYec-g",
+			"descriptions": [
+				{
+					"value": "This Case is locked and requires a\nWicked Windfall Key to open.\n\nContains a community made item\nfrom the Wicked Windfall Collection."
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Contents may be Unusual with a Halloween 2020 effect",
+					"color": "7ea9d1"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Wicked Windfall Collection"
+				},
+				{
+					"value": "    Balloonicorpse",
+					"color": "eb4b4b"
+				},
+				{
+					"value": "    All Hallows' Hatte",
+					"color": "eb4b4b"
+				},
+				{
+					"value": "    Misfortune Fedora",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    Wavefinder",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    The Fire Tooth",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    Wrap-A-Khamon",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    Glow from Below",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Gourd Grin",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Sir Pumpkinton",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Impish Ears",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Eye-See-You",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Semi-Tame Trapper's Hat",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Calamitous Cauldron",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    The Seared Sorcerer",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Goblineer",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Handsome Devil",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    A Handsome Handy Thing",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Hollowed Helm",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Flavorful Baggies",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    King Cardbeard",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    The Boom Boxers",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    The Ghoul Box",
+					"color": "4b69ff"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Exclusive Bonus Item(s):"
+				},
+				{
+					"value": "War Blunder",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Grounded Flyboy",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Rolfe Copter",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Pug Mug",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Treehugger",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Mannvich",
+					"color": "6F6A63"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Global Unusual Effect(s)"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Eerie Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Eerie Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Soulful Slice",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Horsemann's Hack",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Horsemann's Hack",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Forever And Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Cursed Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Wicked Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Spectral Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Global Bonus Item(s)"
+				},
+				{
+					"value": "Paint Cans!\nTaunt Unusualifiers!\nMvM Tickets!\nAnd TF2 Tools!"
+				},
+				{
+					"value": "Inspect for full list of unusual effects and more details"
+				}
+			],
+			"tradable": 1,
+			"actions": [
+				{
+					"link": "http://wiki.teamfortress.com/scripts/itemredirect.php?id=5915&lang=en_US",
+					"name": "Item Wiki Page..."
+				},
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20S%owner_steamid%A%assetid%D11875865985649596443",
+					"name": "Inspect in Game..."
+				}
+			],
+			"name": "Wicked Windfall Case",
+			"name_color": "7D6D00",
+			"type": "",
+			"market_name": "Wicked Windfall Case",
+			"market_hash_name": "Wicked Windfall Case",
+			"market_actions": [
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20M%listingid%A%assetid%D11875865985649596443",
+					"name": "Inspect in Game..."
+				}
+			],
+			"commodity": 1,
+			"market_tradable_restriction": 7,
+			"market_marketable_restriction": 0,
+			"marketable": 1,
+			"tags": [
+				{
+					"category": "Quality",
+					"internal_name": "Unique",
+					"localized_category_name": "Quality",
+					"localized_tag_name": "Unique",
+					"color": "7D6D00"
+				},
+				{
+					"category": "Type",
+					"internal_name": "Supply Crate",
+					"localized_category_name": "Type",
+					"localized_tag_name": "Crate"
+				},
+				{
+					"category": "Collection",
+					"internal_name": "halloween2020_collection_name",
+					"localized_category_name": "Collection",
+					"localized_tag_name": "Wicked Windfall Collection"
+				}
+			]
+		},
+		{
+			"appid": 440,
+			"classid": "4585823175",
+			"instanceid": "0",
+			"currency": 0,
+			"background_color": "3C352E",
+			"icon_url": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEDbQsdUgznvTYR2Jq3MvGNG-U_l9sn4pUb2G46kwAsYrbjYzRmcVaaAqULDa1t9l6-X3Rjv5JmAoC39OsEeQrmtZyGbed__RzEFw",
+			"icon_url_large": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEDbQsdUgznvTYR2Jq3MvGNG-U_l9sn4pUb2G46kwAsYrbjYzRmcVaaAqULDa1t9l6-X3Rjv5JmAoC39OsEeQrmtZyGbed__RzEFw",
+			"descriptions": [
+				{
+					"value": "This Case is locked and requires a\nCrimson Cache Key to open.\n\nContains a community made item\nfrom the Crimson Cache Collection."
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Contents may be Strange and hats may be Unusual with a Halloween 2021 effect",
+					"color": "7ea9d1"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Crimson Cache Collection"
+				},
+				{
+					"value": "    Towering Patch of Pumpkins",
+					"color": "eb4b4b"
+				},
+				{
+					"value": "    The Bone Cone",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    Gruesome Gourd",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    Wandering Wraith",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    The Hook, Line, and Thinker",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Second-Head Headwear",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Alakablamicon",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Goalkeeper",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Eyequarium",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Optic Nerve",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Beanie The All-Gnawing",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Twisted Topper",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Spooky Head-Bouncers",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Creepy Crawlers",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Trickster's Treats",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    The Scariest Mask EVER",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Hat Outta Hell",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Death Stare",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Smiling Somen",
+					"color": "4b69ff"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Exclusive Bonus Item(s):"
+				},
+				{
+					"value": "Poopy Doe",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Batter's Beak",
+					"color": "6F6A63"
+				},
+				{
+					"value": "War Dog",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Miami Rooster",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Computron 5000",
+					"color": "6F6A63"
+				},
+				{
+					"value": "Corpse Carrier",
+					"color": "6F6A63"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Global Unusual Effect(s)"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Eerie Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Eerie Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Soulful Slice",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Horsemann's Hack",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Horsemann's Hack",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Forever And Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Cursed Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Wicked Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Spectral Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Global Bonus Item(s)"
+				},
+				{
+					"value": "Paint Cans!\nTaunt Unusualifiers!\nMvM Tickets!\nAnd TF2 Tools!"
+				},
+				{
+					"value": "Inspect for full list of unusual effects and more details"
+				}
+			],
+			"tradable": 1,
+			"actions": [
+				{
+					"link": "http://wiki.teamfortress.com/scripts/itemredirect.php?id=5928&lang=en_US",
+					"name": "Item Wiki Page..."
+				},
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20S%owner_steamid%A%assetid%D6944985735765597930",
+					"name": "Inspect in Game..."
+				}
+			],
+			"name": "Crimson Cache Case",
+			"name_color": "7D6D00",
+			"type": "",
+			"market_name": "Crimson Cache Case",
+			"market_hash_name": "Crimson Cache Case",
+			"market_actions": [
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20M%listingid%A%assetid%D6944985735765597930",
+					"name": "Inspect in Game..."
+				}
+			],
+			"commodity": 1,
+			"market_tradable_restriction": 7,
+			"market_marketable_restriction": 0,
+			"marketable": 1,
+			"tags": [
+				{
+					"category": "Quality",
+					"internal_name": "Unique",
+					"localized_category_name": "Quality",
+					"localized_tag_name": "Unique",
+					"color": "7D6D00"
+				},
+				{
+					"category": "Type",
+					"internal_name": "Supply Crate",
+					"localized_category_name": "Type",
+					"localized_tag_name": "Crate"
+				},
+				{
+					"category": "Collection",
+					"internal_name": "halloween2021_collection_name",
+					"localized_category_name": "Collection",
+					"localized_tag_name": "Crimson Cache Collection"
+				}
+			]
+		},
+		{
+			"appid": 440,
+			"classid": "1336074014",
+			"instanceid": "1387838117",
+			"currency": 0,
+			"background_color": "3C352E",
+			"icon_url": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEIYw4fYhLsrjlQgcfoMv6NGucF1dhltcIGjDM4wFgiY7u2aWYzIwKWUvgHCK1uoA61WiNgvp8yV4_g8elIOVK4hTAVtRc",
+			"icon_url_large": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEIYw4fYhLsrjlQgcfoMv6NGucF1dhltcIGjDM4wFgiY7u2aWYzIwKWUvgHCK1uoA61WiNgvp8yV4_g8elIOVK4hTAVtRc",
+			"descriptions": [
+				{
+					"value": "(Kills and Assists on 2Fort Invasion: 115)",
+					"color": "756b5e"
+				},
+				{
+					"value": "(Kills and Assists on Probed: 11)",
+					"color": "756b5e"
+				},
+				{
+					"value": "(Kills and Assists on Byre: 7)",
+					"color": "756b5e"
+				},
+				{
+					"value": "(Kills and Assists on Watergate: 67)",
+					"color": "756b5e"
+				},
+				{
+					"value": "The Invasion Community Update ended on November 9, 2015.\n\nThank you for supporting the Invasion Community Update Team\nGrants access to Invasion Community Update case drops through the end of 2015\n\nStats are tracked until November 9, 2015"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "The Invasion Collections"
+				},
+				{
+					"value": "    Confidential Collection",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Quarantined Collection",
+					"color": "4b69ff"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Global Bonus Item(s)"
+				},
+				{
+					"value": "Paint Cans!\nTaunt Unusualifiers!\nMvM Tickets!\nAnd TF2 Tools!"
+				},
+				{
+					"value": "Inspect for full list of unusual effects and more details"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "( Not Tradable, Marketable, or Usable in Crafting )"
+				}
+			],
+			"tradable": 0,
+			"actions": [
+				{
+					"link": "http://wiki.teamfortress.com/scripts/itemredirect.php?id=5820&lang=en_US",
+					"name": "Item Wiki Page..."
+				},
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20S%owner_steamid%A%assetid%D6957303993231432010",
+					"name": "Inspect in Game..."
+				}
+			],
+			"name": "Strange Invasion Community Update Coin",
+			"name_color": "7D6D00",
+			"type": "Strange Tool - Kills and Assists during Invasion Event: 3750",
+			"market_name": "Strange Invasion Community Update Coin",
+			"market_hash_name": "Strange Invasion Community Update Coin",
+			"market_actions": [
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20M%listingid%A%assetid%D6957303993231432010",
+					"name": "Inspect in Game..."
+				}
+			],
+			"commodity": 0,
+			"market_tradable_restriction": 7,
+			"market_marketable_restriction": 0,
+			"marketable": 0,
+			"tags": [
+				{
+					"category": "Quality",
+					"internal_name": "Unique",
+					"localized_category_name": "Quality",
+					"localized_tag_name": "Unique",
+					"color": "7D6D00"
+				},
+				{
+					"category": "Type",
+					"internal_name": "Craft Item",
+					"localized_category_name": "Type",
+					"localized_tag_name": "Craft Item"
+				},
+				{
+					"category": "Collection",
+					"internal_name": "invasion_master_collection",
+					"localized_category_name": "Collection",
+					"localized_tag_name": "The Invasion Collections"
+				}
+			]
+		},
+		{
+			"appid": 440,
+			"classid": "1442478139",
+			"instanceid": "1642442260",
+			"currency": 0,
+			"background_color": "3C352E",
+			"icon_url": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEYeAYcTST1sTZXjdq0XaPaN-cPl94K6ZFH3jMlkwUvN7qxZzYzIVGVVfcHDKRoo1C4CiIwscJiA9Lho-xULF275dbBMK5sbo8rkiarvw",
+			"icon_url_large": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEYeAYcTST1sTZXjdq0XaPaN-cPl94K6ZFH3jMlkwUvN7qxZzYzIVGVVfcHDKRoo1C4CiIwscJiA9Lho-xULF275dbBMK5sbo8rkiarvw",
+			"descriptions": [
+				{
+					"value": "(Contract Bonus Points: 780)",
+					"color": "756b5e"
+				},
+				{
+					"value": "(Contracts Completed: 26)",
+					"color": "756b5e"
+				},
+				{
+					"value": "(Kills: 15976)",
+					"color": "756b5e"
+				},
+				{
+					"value": "The Tough Break Campaign ended on April 4, 2016.\n\nThe Tough Break Campaign Stamp granted access to contracts and tracked stats during the campaign. You could level up the stamp by earning Contract Points from completed contracts. The stamp would level up at 1000, 2000, and 3000 Contract Points."
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "The Tough Break Collections"
+				},
+				{
+					"value": "    Warbird Collection",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Pyroland Collection",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Tough Break Cosmetics Collection",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Gentlemanne's Collection",
+					"color": "b0c3d9"
+				},
+				{
+					"value": "    Harvest Collection",
+					"color": "b0c3d9"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Global Bonus Item(s)"
+				},
+				{
+					"value": "Paint Cans!\nTaunt Unusualifiers!\nMvM Tickets!\nAnd TF2 Tools!"
+				},
+				{
+					"value": "Inspect for full list of unusual effects and more details"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "( Not Tradable, Marketable, or Usable in Crafting )"
+				}
+			],
+			"tradable": 0,
+			"actions": [
+				{
+					"link": "http://wiki.teamfortress.com/scripts/itemredirect.php?id=5830&lang=en_US",
+					"name": "Item Wiki Page..."
+				},
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20S%owner_steamid%A%assetid%D12107099735673405822",
+					"name": "Inspect in Game..."
+				}
+			],
+			"name": "Gravel Tough Break Campaign Stamp",
+			"name_color": "7D6D00",
+			"type": "Gravel Tool - Contract Points: 3380",
+			"market_name": "Strange Tough Break Campaign Stamp",
+			"market_hash_name": "Strange Tough Break Campaign Stamp",
+			"market_actions": [
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20M%listingid%A%assetid%D12107099735673405822",
+					"name": "Inspect in Game..."
+				}
+			],
+			"commodity": 0,
+			"market_tradable_restriction": 7,
+			"market_marketable_restriction": 0,
+			"marketable": 0,
+			"tags": [
+				{
+					"category": "Quality",
+					"internal_name": "Unique",
+					"localized_category_name": "Quality",
+					"localized_tag_name": "Unique",
+					"color": "7D6D00"
+				},
+				{
+					"category": "Type",
+					"internal_name": "Craft Item",
+					"localized_category_name": "Type",
+					"localized_tag_name": "Craft Item"
+				},
+				{
+					"category": "Collection",
+					"internal_name": "operation_tough_break_master_collection",
+					"localized_category_name": "Collection",
+					"localized_tag_name": "The Tough Break Collections"
+				}
+			]
+		},
+		{
+			"appid": 440,
+			"classid": "1336074012",
+			"instanceid": "1342112325",
+			"currency": 0,
+			"background_color": "3C352E",
+			"icon_url": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEIYw4fYgj3tTVGmpq2XKezD-8Mn-U55IJS3HhuxFQrN7fkZmJhcAeXBaYHDKVtpF3tW3RquJNiAYDu8eoDcV2659aVLfByZ3UT669Q",
+			"icon_url_large": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEIYw4fYgj3tTVGmpq2XKezD-8Mn-U55IJS3HhuxFQrN7fkZmJhcAeXBaYHDKVtpF3tW3RquJNiAYDu8eoDcV2659aVLfByZ3UT669Q",
+			"descriptions": [
+				{
+					"value": "(Contract Bonus Points: 205)",
+					"color": "756b5e"
+				},
+				{
+					"value": "(Contracts Completed: 28)",
+					"color": "756b5e"
+				},
+				{
+					"value": "(Kills: 1971)",
+					"color": "756b5e"
+				},
+				{
+					"value": "The Gun Mettle Campaign ended on September 30, 2015.\n\nThe Gun Mettle Campaign Coin granted access to contracts and tracked stats during the campaign. You could level up the coin by earning Contract Points from completed contracts. The coin would level up at 1000, 2000, and 3000 Contract Points."
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "The Gun Mettle Collections"
+				},
+				{
+					"value": "    Gun Mettle Cosmetics Collection",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Powerhouse Collection",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Concealed Killer Collection",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Teufort Collection",
+					"color": "b0c3d9"
+				},
+				{
+					"value": "    Craftsmann Collection",
+					"color": "b0c3d9"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Global Bonus Item(s)"
+				},
+				{
+					"value": "Paint Cans!\nTaunt Unusualifiers!\nMvM Tickets!\nAnd TF2 Tools!"
+				},
+				{
+					"value": "Inspect for full list of unusual effects and more details"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "( Not Tradable, Marketable, or Usable in Crafting )"
+				}
+			],
+			"tradable": 0,
+			"actions": [
+				{
+					"link": "http://wiki.teamfortress.com/scripts/itemredirect.php?id=5809&lang=en_US",
+					"name": "Item Wiki Page..."
+				},
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20S%owner_steamid%A%assetid%D7849542689796507819",
+					"name": "Inspect in Game..."
+				}
+			],
+			"name": "Gravel Gun Mettle Campaign Coin",
+			"name_color": "7D6D00",
+			"type": "Gravel Tool - Contract Points: 3005",
+			"market_name": "Strange Gun Mettle Campaign Coin",
+			"market_hash_name": "Strange Gun Mettle Campaign Coin",
+			"market_actions": [
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20M%listingid%A%assetid%D7849542689796507819",
+					"name": "Inspect in Game..."
+				}
+			],
+			"commodity": 0,
+			"market_tradable_restriction": 7,
+			"market_marketable_restriction": 0,
+			"marketable": 0,
+			"tags": [
+				{
+					"category": "Quality",
+					"internal_name": "Unique",
+					"localized_category_name": "Quality",
+					"localized_tag_name": "Unique",
+					"color": "7D6D00"
+				},
+				{
+					"category": "Type",
+					"internal_name": "Craft Item",
+					"localized_category_name": "Type",
+					"localized_tag_name": "Craft Item"
+				},
+				{
+					"category": "Collection",
+					"internal_name": "operation_gun_mettle_master_collection",
+					"localized_category_name": "Collection",
+					"localized_tag_name": "The Gun Mettle Collections"
+				}
+			]
+		},
+		{
+			"appid": 440,
+			"classid": "2770487944",
+			"instanceid": "0",
+			"currency": 0,
+			"background_color": "3C352E",
+			"icon_url": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEIYwocSBXrrCF8i8f1APeYAeM_mNsm4K9X1SNunA50Oty5MSVgd0qVVfFcXvQ_8V7pXyExv543AoWyoOxUcVnrs4vOZ7R4NNEZGciGD_OHeEmjvfyz473P",
+			"icon_url_large": "fWFc82js0fmoRAP-qOIPu5THSWqfSmTELLqcUywGkijVjZULUrsm1j-9xgEIYwocSBXrrCF8i8f1APeYAeM_mNsm4K9X1SNunA50Oty5MSVgd0qVVfFcXvQ_8V7pXyExv543AoWyoOxUcVnrs4vOZ7R4NNEZGciGD_OHeEmjvfyz473P",
+			"descriptions": [
+				{
+					"value": "This case is locked and requires a\nBlue Moon Cosmetic Key to open.\n\nContains a community made item\nfrom the Blue Moon Cosmetic Collection."
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Contents may be Strange or an Unusual Blue Moon Hat",
+					"color": "7ea9d1"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Blue Moon Cosmetics Collection"
+				},
+				{
+					"value": "    Robin Walkers",
+					"color": "eb4b4b"
+				},
+				{
+					"value": "    Private Maggot Muncher",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    The Cold Case",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    The Frag Proof Fragger",
+					"color": "d32ce6"
+				},
+				{
+					"value": "    Starboard Crusader",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Scourge of the Sky",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Veteran's Attire",
+					"color": "8847ff"
+				},
+				{
+					"value": "    The Burning Question",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Aristotle",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Blizzard Britches",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Punk's Pomp",
+					"color": "8847ff"
+				},
+				{
+					"value": "    Antarctic Eyewear",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    The Head Hedge",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Tsar Platinum",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Sky High Fly Guy",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    The Hot Case",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Assassin's Attire",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    Wipe Out Wraps",
+					"color": "4b69ff"
+				},
+				{
+					"value": "    The Tundra Top",
+					"color": "4b69ff"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Global Unusual Effect(s)"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Eerie Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Eerie Kraken",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Soulful Slice",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Horsemann's Hack",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Horsemann's Hack",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Forever And Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Cursed Forever!",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Moth Plague",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Malevolent Monoculi",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Haunted Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Wicked Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": "★ Unusual Effect: Spectral Wick",
+					"color": "ffd700"
+				},
+				{
+					"value": " "
+				},
+				{
+					"value": "Case Global Bonus Item(s)"
+				},
+				{
+					"value": "Paint Cans!\nTaunt Unusualifiers!\nMvM Tickets!\nAnd TF2 Tools!"
+				},
+				{
+					"value": "Inspect for full list of unusual effects and more details"
+				}
+			],
+			"tradable": 1,
+			"actions": [
+				{
+					"link": "http://wiki.teamfortress.com/scripts/itemredirect.php?id=5893&lang=en_US",
+					"name": "Item Wiki Page..."
+				},
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20S%owner_steamid%A%assetid%D7665981649385449797",
+					"name": "Inspect in Game..."
+				}
+			],
+			"name": "Blue Moon Cosmetic Case",
+			"name_color": "7D6D00",
+			"type": "",
+			"market_name": "Blue Moon Cosmetic Case",
+			"market_hash_name": "Blue Moon Cosmetic Case",
+			"market_actions": [
+				{
+					"link": "steam://rungame/440/76561202255233023/+tf_econ_item_preview%20M%listingid%A%assetid%D7665981649385449797",
+					"name": "Inspect in Game..."
+				}
+			],
+			"commodity": 1,
+			"market_tradable_restriction": 7,
+			"market_marketable_restriction": 0,
+			"marketable": 1,
+			"tags": [
+				{
+					"category": "Quality",
+					"internal_name": "Unique",
+					"localized_category_name": "Quality",
+					"localized_tag_name": "Unique",
+					"color": "7D6D00"
+				},
+				{
+					"category": "Type",
+					"internal_name": "Supply Crate",
+					"localized_category_name": "Type",
+					"localized_tag_name": "Crate"
+				},
+				{
+					"category": "Collection",
+					"internal_name": "BlueMoonCosmetics_collection",
+					"localized_category_name": "Collection",
+					"localized_tag_name": "Blue Moon Cosmetics Collection"
+				}
+			]
+		}
+	],
+	"more_items": 1,
+	"last_assetid": "10744122512",
+	"total_inventory_count": 1056,
+	"success": 1,
+	"rwgrsn": -2
+}
