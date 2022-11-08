@@ -1,6 +1,26 @@
+@font-face {
+  font-family: 'TF2';
+  src: url('./assets/tf2.ttf');
+}
+
+@font-face {
+  font-family: 'TF2 Build';
+  src: url('./assets/tf2build.ttf');
+}
+
+@font-face {
+  font-family: 'TF2 Professor';
+  src: url('./assets/tf2professor.ttf');
+}
+
+@font-face {
+  font-family: 'TF2 Secondary';
+  src: url('./assets/tf2secondary.ttf');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'TF2 Secondary', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,4 +30,21 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p {
+  margin: 0;
+  font-family: 'TF2 Secondary';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: 'TF2 Build';
+  font-size: smaller;
+  font-weight: 500;
 }

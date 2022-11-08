@@ -1,4 +1,3 @@
-import React from 'react';
 import { ItemModel } from './models/ItemModel';
 import './Item.css'
 import clsx from 'clsx';
@@ -12,7 +11,7 @@ function Item(props: ItemProps) {
     <div className={clsx("Item", {
       untradable: !props.item.tradable
     })}>
-      <p>{props.item.name}</p>
+      <h1>{props.item.name}</h1>
       <img
         src={props.item.url}
         width={200}

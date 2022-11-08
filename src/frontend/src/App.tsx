@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
-import Item from './Item';
 import { ItemModel } from './models/ItemModel';
 import { ItemResponse } from './models/ItemResponse';
 import { getItems } from './api';
+import ItemDisplay from './ItemDisplay';
 
 function App() {
-  const [checked, setChecked] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [useMockResponse, setUseMockResponse] = useState(false);
   const [items, setItems] = useState([] as ItemResponse[]);
   const [filteredItems, setFilteredItems] = useState([] as ItemResponse[]);
 
   async function loadItems() {
-    const data = await getItems(checked);
-    setItems(data);
-    setFilteredItems(data);
+    setLoading(true);
+    try {
+      const data = await getItems(useMockResponse);
+      setItems(data);
+      setFilteredItems(data);
+    } finally {
+      setLoading(false);
+    }
   }
 
   function search(name: string) {
@@ -29,34 +35,25 @@ function App() {
           <input
             type="checkbox"
             id="useMockResponse"
-            checked={checked}
-            onChange={(e) => setChecked(e.target.checked)}
+            checked={useMockResponse}
+            onChange={(e) => setUseMockResponse(e.target.checked)}
           />
         </div>
 
-        <button onClick={loadItems}>Get Items</button>
+        <button onClick={loadItems} disabled={loading}>Get Items</button>
 
         {items && items.length > 0 &&
-          <input onChange={(e) => { search(e.target.value)}} />}
+          <input onChange={(e) => { search(e.target.value) }} />}
 
-        {filteredItems &&
-          <>
-            <div className='items'>
-              {filteredItems.map((i) => {
-                const item = {
-                  name: i.name,
-                  quantity: i.quantity,
-                  url: i.iconUrl,
-                  tradable: i.tradable ?? true
-                } as ItemModel;
-                return <Item
-                  key={i.classId}
-                  item={item}
-                />
-              })}
-            </div>
-          </>
-        }
+        <ItemDisplay items={filteredItems.map((i) => {
+          return {
+            classId: i.classId,
+            name: i.name,
+            quantity: i.quantity,
+            url: i.iconUrl,
+            tradable: i.tradable ?? true
+          } as ItemModel;
+        })} />
       </header>
     </div>
   );

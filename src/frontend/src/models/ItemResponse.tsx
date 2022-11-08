@@ -1,5 +1,5 @@
 export interface ItemResponse {
-  classId: number;
+  classId: string;
   name: string;
   type: string;
   quantity: number;
