@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace BackpackViewer
 {
-    public class SteamBackpackLoader
+    public class SteamCommunityBackpackLoader : ISteamCommunityBackpackLoader
     {
         public async Task<SteamItemsResponse> GetItems(ulong steamId, int appId = 440, string language = "english", int count = 2000)
         {

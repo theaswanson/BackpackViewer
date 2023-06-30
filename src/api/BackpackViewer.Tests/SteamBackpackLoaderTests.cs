@@ -2,12 +2,12 @@ namespace BackpackViewer.Tests
 {
     public class SteamBackpackLoaderTests
     {
-        private SteamBackpackLoader _backpackLoader;
+        private SteamCommunityBackpackLoader _backpackLoader;
 
         [SetUp]
         public void Setup()
         {
-            _backpackLoader = new SteamBackpackLoader();
+            _backpackLoader = new SteamCommunityBackpackLoader();
         }
 
         [TestCase()]

@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackpackViewer.Core", "Back
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackpackViewer.Tests", "BackpackViewer.Tests\BackpackViewer.Tests.csproj", "{2E72FB30-B3B9-486B-A57A-D188D44B7355}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackbackViewer.API", "BackbackViewer.API\BackbackViewer.API.csproj", "{5573B3E9-E3E8-4E5E-8911-E5511EEA626B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackpackViewer.API", "BackpackViewer.API\BackpackViewer.API.csproj", "{5573B3E9-E3E8-4E5E-8911-E5511EEA626B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
