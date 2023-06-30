@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import './App.css';
-import { ItemModel } from './models/ItemModel';
-import { ItemResponse } from './models/ItemResponse';
-import { getItems } from './api';
-import ItemDisplay from './ItemDisplay';
+import { useState } from "react";
+import "./App.css";
+import { ItemModel } from "./models/ItemModel";
+import { ItemResponse } from "./models/ItemResponse";
+import { getItems } from "./api";
+import ItemDisplay from "./ItemDisplay";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -23,7 +23,9 @@ function App() {
   }
 
   function search(name: string) {
-    const filteredItems = items.filter((i) => i.name.toLowerCase().includes(name.toLowerCase()))
+    const filteredItems = items.filter((i) =>
+      i.name.toLowerCase().includes(name.toLowerCase())
+    );
     setFilteredItems(filteredItems);
   }
 
@@ -40,20 +42,29 @@ function App() {
           />
         </div>
 
-        <button onClick={loadItems} disabled={loading}>Get Items</button>
+        <button onClick={loadItems} disabled={loading}>
+          Get Items
+        </button>
 
-        {items && items.length > 0 &&
-          <input onChange={(e) => { search(e.target.value) }} />}
+        {items && items.length > 0 && (
+          <input
+            onChange={(e) => {
+              search(e.target.value);
+            }}
+          />
+        )}
 
-        <ItemDisplay items={filteredItems.map((i) => {
-          return {
-            classId: i.classId,
-            name: i.name,
-            quantity: i.quantity,
-            url: i.iconUrl,
-            tradable: i.tradable ?? true
-          } as ItemModel;
-        })} />
+        <ItemDisplay
+          items={filteredItems.map((i) => {
+            return {
+              classId: i.classId,
+              name: i.name,
+              quantity: i.quantity,
+              url: i.iconUrl,
+              tradable: i.tradable ?? true,
+            } as ItemModel;
+          })}
+        />
       </header>
     </div>
   );

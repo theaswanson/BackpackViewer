@@ -11,11 +11,10 @@ function Item(props: ItemProps) {
     <div className={clsx("Item", {
       untradable: !props.item.tradable
     })}>
-      <h1>{props.item.name}</h1>
       <img
         src={props.item.url}
-        width={200}
-        height={200}
+        width={150}
+        height={150}
         alt="Item icon"></img>
       {props.item.quantity > 1 && <p>x{props.item.quantity}</p>}
     </div>
