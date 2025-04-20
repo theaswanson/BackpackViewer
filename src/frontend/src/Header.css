@@ -1,3 +1,9 @@
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -13,4 +19,15 @@
     font-size: 2.75rem;
     color: #ece5c8;
   }
+}
+
+.select {
+  font-family: "TF2 Build";
+  border: 3px solid #ece5c8;
+  padding: 7px 10px;
+}
+
+.select-option {
+  font-family: "TF2 Build";
+  padding: 7px 10px;
 }
