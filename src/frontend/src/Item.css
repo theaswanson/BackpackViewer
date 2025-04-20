@@ -1,7 +1,16 @@
 .Item {
-	border: 1px black solid;
+  border: 3px #ffe52a solid;
+  border-radius: 0.6rem;
+  background-color: #221e1b;
+  height: 100px;
+}
+
+.Item img {
+  width: 135px;
+  height: 100px;
+  object-fit: cover;
 }
 
 .untradable {
-	background-color: rgba(255, 0, 0, 0.2);
+  background-color: rgba(255, 0, 0, 0.2);
 }
