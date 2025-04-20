@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import "./Item.css";
 import { ItemModel } from "./models/ItemModel";
+import { Pill } from "./Pill";
 
 interface ItemProps {
   item: ItemModel;
@@ -14,7 +15,9 @@ function Item(props: ItemProps) {
       })}
     >
       <img src={props.item.url} alt='Item icon'></img>
-      {/* {props.item.quantity > 1 && <p>x{props.item.quantity}</p>} */}
+      {props.item.quantity > 1 && (
+        <Pill text={`x${props.item.quantity}`}></Pill>
+      )}
     </div>
   );
 }
