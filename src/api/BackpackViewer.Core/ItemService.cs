@@ -59,7 +59,7 @@ namespace BackpackViewer.Core
                     return new ItemSummary
                     {
                         ClassId = string.Empty,
-                        Name = schemaItem?.Name ?? "Unknown item",
+                        Name = schemaItem?.ItemName ?? schemaItem?.Name ?? "Unknown item",
                         Type = schemaItem?.ItemTypeName ?? "Unknown type",
                         Quantity = itemGroup.Quantity,
                         IconUrl = schemaItem?.ImageUrlLarge ?? string.Empty,
