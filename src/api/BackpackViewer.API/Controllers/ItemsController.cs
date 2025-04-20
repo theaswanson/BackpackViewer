@@ -1,8 +1,6 @@
-using BackpackViewer;
 using BackpackViewer.Core;
 using BackpackViewer.Core.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
 
 namespace BackbackViewer.API.Controllers
 {
@@ -12,27 +10,32 @@ namespace BackbackViewer.API.Controllers
     {
         private readonly IWebHostEnvironment _env;
         private readonly IItemService _itemService;
+        private readonly IConfiguration _configuration;
         private readonly ILogger<ItemsController> _logger;
 
         public ItemsController(
             IWebHostEnvironment env,
             IItemService itemService,
+            IConfiguration configuration,
             ILogger<ItemsController> logger)
         {
             _env = env;
             _itemService = itemService;
+            _configuration = configuration;
             _logger = logger;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<ItemSummary>> Get(bool useMockResponse)
+        [Route("{steamId}")]
+        public async Task<IEnumerable<ItemSummary>> Get(ulong steamId, [FromQuery] bool useMockResponse)
         {
-            const ulong SteamId = 76561198084230569;
+            if (steamId <= 0) throw new ArgumentOutOfRangeException(nameof(steamId));
 
             return await _itemService.GetItemsViaWebAPIAsync(
-                SteamId,
+                steamId,
+                _configuration.GetRequiredSection("Steam").GetValue<string>("ApiKey"),
                 useMockResponse ? Path.Combine(_env.WebRootPath, "player-items.json") : null,
-                Path.Combine(_env.WebRootPath, "full-schema.json"));
+                useMockResponse ? Path.Combine(_env.WebRootPath, "full-schema.json") : null);
         }
     }
 }

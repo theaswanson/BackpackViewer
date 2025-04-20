@@ -71,7 +71,7 @@ namespace BackpackViewer.Core
 
         public async Task<IEnumerable<ItemSummary>> GetItemsViaSteamCommunityAsync(ulong steamId)
         {
-            _logger.LogInformation("Fetching items for SteamID:{steamId}", steamId);
+            _logger.LogInformation("Fetching items for SteamID: {steamId}", steamId);
 
             var response = await _steamCommunityBackpackLoader.GetItems(steamId);
 

@@ -10,12 +10,10 @@ namespace BackpackViewer.Tests
             _backpackLoader = new SteamCommunityBackpackLoader();
         }
 
-        [TestCase()]
+        [Test]
         public async Task GetSuccessfulResponse()
         {
-            // TODO: set Steam ID
-            var steamId = 0u;
-            var items = await _backpackLoader.GetItems(steamId);
+            var items = await _backpackLoader.GetItems(TestConstants.SteamId);
 
             Assert.That(items, Is.Not.Null);
             Assert.That(items.Success, Is.EqualTo(1));

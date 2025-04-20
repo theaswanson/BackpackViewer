@@ -7,6 +7,15 @@ using System.Text.Json;
 
 namespace BackpackViewer
 {
+    public enum GetPlayerItemsResult
+    {
+        Unknown,
+        Success,
+        InvalidSteamId,
+        BackpackIsPrivate,
+        SteamIdDoesNotExist,
+    }
+    
     public class WebApiBackpackLoader : IWebApiBackpackLoader
     {
         private readonly ILogger<WebApiBackpackLoader> _logger;
@@ -15,6 +24,25 @@ namespace BackpackViewer
         {
             _logger = logger;
         }
+
+        public GetPlayerItemsResult GetStatus(uint status) =>
+            status switch
+            {
+                1 => GetPlayerItemsResult.Success,
+                8 => GetPlayerItemsResult.InvalidSteamId,
+                15 => GetPlayerItemsResult.BackpackIsPrivate,
+                18 => GetPlayerItemsResult.SteamIdDoesNotExist,
+                _ => GetPlayerItemsResult.Unknown
+            };
+
+        public string GetErrorMessage(GetPlayerItemsResult status) =>
+            status switch
+            {
+                GetPlayerItemsResult.InvalidSteamId => "Invalid Steam ID.",
+                GetPlayerItemsResult.BackpackIsPrivate => "Backpack is private.",
+                GetPlayerItemsResult.SteamIdDoesNotExist => "Steam ID does not exist.",
+                _ => "Unknown error.",
+            };
 
         public async Task<EconItemResultModel> GetItems(string apiKey, ulong steamId)
         {
@@ -28,13 +56,17 @@ namespace BackpackViewer
                 {
                     var response = await api.GetPlayerItemsAsync(steamId);
 
-                    if (response.Data.Status != 1)
+                    var status = GetStatus(response.Data.Status);
+                    
+                    if (status != GetPlayerItemsResult.Success)
                     {
-                        retryCount++;
+                        _logger.LogError(GetErrorMessage(status));
 
-                        _logger.LogError("Player item response indicates failure. Retrying...");
-
-                        await Task.Delay(TimeSpan.FromSeconds(3));
+                        if (status == GetPlayerItemsResult.Unknown)
+                        {
+                            retryCount++;
+                            await Task.Delay(TimeSpan.FromSeconds(3));
+                        }
                     }
 
                     return response.Data;
