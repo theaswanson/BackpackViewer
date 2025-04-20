@@ -1,31 +1,26 @@
-import { Children, PropsWithChildren, ReactNode, useState } from "react";
+import { CustomSelect } from "./CustomSelect";
 import "./Header.css";
 
-const SelectOption = ({ children }: { children: ReactNode }) => (
-  <div className='select-option'>{children}</div>
-);
-
-const ItemBordersSelect = ({ children }: PropsWithChildren) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const selectedItem = Children.toArray(children)[0];
-
-  return (
-    <>
-      <div className='select' onClick={() => setIsOpen((open) => !open)}>
-        {selectedItem}
-      </div>
-
-      {isOpen ? <div>{children}</div> : undefined}
-    </>
-  );
-};
-
-const FilterOptions = () => (
-  <ItemBordersSelect>
-    <SelectOption>No Item Borders</SelectOption>
-    <SelectOption>Show quality color borders</SelectOption>
-    <SelectOption>Show marketable borders only</SelectOption>
-  </ItemBordersSelect>
+const ViewOptions = () => (
+  <>
+    <CustomSelect
+      options={[
+        "No Item Borders",
+        "Show quality color borders",
+        "Show marketable borders only",
+      ]}
+    />
+    <CustomSelect
+      options={[
+        "Sort Backpack",
+        "Sort By Quality",
+        "Sort by Type",
+        "Sort by Class",
+        "Sort by Loadout Slot",
+        "Sort by Date",
+      ]}
+    />
+  </>
 );
 
 export const Header = () => (
@@ -34,6 +29,6 @@ export const Header = () => (
       <span>{">>"}</span>
       <h1>BACKPACK</h1>
     </div>
-    <FilterOptions />
+    <ViewOptions />
   </div>
 );

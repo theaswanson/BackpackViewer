@@ -22,12 +22,44 @@
 }
 
 .select {
+  display: inline-block;
+  flex-direction: column;
   font-family: "TF2 Build";
-  border: 3px solid #ece5c8;
+  font-size: 1.75rem;
   padding: 7px 10px;
+  position: relative;
+  user-select: none;
+  width: 500px;
+  color: #ebe4ca;
 }
 
-.select-option {
-  font-family: "TF2 Build";
-  padding: 7px 10px;
+.select .dropdown {
+  margin-top: 1px;
+  position: absolute;
+  background-color: #000000;
+  width: 100%;
+}
+
+.select .select-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 17px;
+}
+
+.select .select-option:hover {
+  background-color: #ebe3ca;
+  color: #756c5e;
+}
+
+.select .select-option.main {
+  padding: 3px 8px;
+  background-color: inherit;
+  cursor: pointer;
+  border: 3px solid #ece5c8;
+}
+
+.select .select-option.main:hover {
+  background-color: inherit;
+  color: inherit;
 }
