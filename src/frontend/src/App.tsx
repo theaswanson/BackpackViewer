@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { getItems } from "./api";
 import "./App.css";
-import ItemDisplay from "./ItemDisplay";
+import { Backpack } from "./Backpack";
 import { ItemModel } from "./models/ItemModel";
 import { ItemResponse } from "./models/ItemResponse";
 
@@ -11,6 +11,14 @@ function App() {
   const [steamId, setSteamId] = useState<string>();
   const [items, setItems] = useState([] as ItemResponse[]);
   const [filteredItems, setFilteredItems] = useState([] as ItemResponse[]);
+
+  const backpackItems: ItemModel[] = filteredItems.map((i) => ({
+    classId: i.classId,
+    name: i.name,
+    quantity: i.quantity,
+    url: i.iconUrl,
+    tradable: i.tradable ?? true,
+  }));
 
   async function loadItems() {
     if (!steamId) {
@@ -68,19 +76,8 @@ function App() {
             />
           )}
         </div>
-
-        <ItemDisplay
-          items={filteredItems.map((i) => {
-            return {
-              classId: i.classId,
-              name: i.name,
-              quantity: i.quantity,
-              url: i.iconUrl,
-              tradable: i.tradable ?? true,
-            } as ItemModel;
-          })}
-        />
       </header>
+      <Backpack items={backpackItems} />
     </div>
   );
 }

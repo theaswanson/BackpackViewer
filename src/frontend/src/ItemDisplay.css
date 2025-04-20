@@ -1,5 +1,43 @@
 .ItemDisplay {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.Table {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 0.5rem;
+  grid-template-columns: repeat(10, 135px);
+  gap: 0.5rem 1rem;
+}
+
+.paging {
+  display: grid;
+  grid-template-columns: repeat(20, 62px);
+
+  gap: 0.7rem;
+}
+
+.pageButton {
+  background-color: #776b5f;
+  border: none;
+  border-radius: 0.75rem;
+  color: #ece5c8;
+  height: 35px;
+  width: 62px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.7rem;
+}
+
+.pageButton.partial {
+  color: #aca38a;
+}
+
+.pageButton.empty {
+  color: #2b2724;
+}
+
+.pageButton:hover {
+  background-color: #934739;
 }

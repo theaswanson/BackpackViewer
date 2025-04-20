@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  span {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #ca4f32;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+    color: #ece5c8;
+  }
+}
