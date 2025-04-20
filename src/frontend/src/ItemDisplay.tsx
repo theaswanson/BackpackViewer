@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import { useState } from "react";
+import { Tooltip } from "react-tooltip";
 import Item from "./Item";
+import { ItemDescription } from "./ItemDescription";
 import "./ItemDisplay.css";
 import { ItemModel } from "./models/ItemModel";
 
@@ -59,8 +61,19 @@ const ItemDisplay = ({ items }: ItemDisplayProps) => {
   return (
     <div className='ItemDisplay'>
       <div className='Table'>
-        {displayedItems.map((i) => (
-          <Item key={i.classId} item={i} />
+        {displayedItems.map((item, i) => (
+          <>
+            <Item id={`item-${i}`} key={item.classId} item={item} />
+            <Tooltip
+              anchorSelect={`#item-${i}`}
+              place='top'
+              style={{ zIndex: "2" }}
+              disableStyleInjection={true}
+              opacity={1}
+            >
+              <ItemDescription />
+            </Tooltip>
+          </>
         ))}
       </div>
       <div className='paging'>

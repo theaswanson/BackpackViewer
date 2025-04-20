@@ -1,0 +1,37 @@
+.item-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-image: linear-gradient(#8d867e 0%, #39332c 1%, #221e1a 100%);
+  padding: 2rem 7rem;
+  border-radius: 0.25rem;
+  color: #eee9cb;
+  box-shadow: 0px 0px 1px 0px black;
+}
+
+.item-desc .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.item-desc h1 {
+  color: #fdd802;
+  font-size: 2rem;
+}
+
+.item-desc h2 {
+  color: #726c64;
+  font-size: 1.9rem;
+  font-family: "TF2 Secondary";
+}
+
+.item-desc p {
+  font-size: 1.8rem;
+}
+
+.item-desc .limited-use {
+  color: #1b931a;
+}

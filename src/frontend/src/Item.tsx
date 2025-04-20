@@ -4,20 +4,20 @@ import { ItemModel } from "./models/ItemModel";
 import { Pill } from "./Pill";
 
 interface ItemProps {
+  id?: string;
   item: ItemModel;
 }
 
-function Item(props: ItemProps) {
+function Item({ id, item }: ItemProps) {
   return (
     <div
+      id={id}
       className={clsx("Item", {
-        untradable: !props.item.tradable,
+        untradable: !item.tradable,
       })}
     >
-      <img src={props.item.url} alt='Item icon'></img>
-      {props.item.quantity > 1 && (
-        <Pill text={`x${props.item.quantity}`}></Pill>
-      )}
+      <img src={item.url} alt='Item icon'></img>
+      {item.quantity > 1 && <Pill text={`x${item.quantity}`}></Pill>}
     </div>
   );
 }
