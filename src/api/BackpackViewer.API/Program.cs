@@ -14,8 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddTransient<IWebApiBackpackLoader, WebApiBackpackLoader>();
-builder.Services.AddTransient<ISteamCommunityBackpackLoader, SteamCommunityBackpackLoader>();
+builder.Services.AddTransient<ITf2BackpackLoader, Tf2BackpackLoader>();
 builder.Services.AddTransient<IItemService, ItemService>();
 
 

@@ -18,6 +18,10 @@
   src: url("./assets/tf2secondary.ttf");
 }
 
+:root {
+  --tf2-colors-unique: #ffd700;
+}
+
 body {
   margin: 0;
   font-family: "TF2 Secondary", -apple-system, BlinkMacSystemFont, "Segoe UI",

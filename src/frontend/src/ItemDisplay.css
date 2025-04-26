@@ -38,6 +38,10 @@
   color: #2b2724;
 }
 
+.pageButton.active {
+  background-color: #934739;
+}
+
 .pageButton:hover {
   background-color: #934739;
 }

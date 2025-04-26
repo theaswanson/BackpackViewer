@@ -1,11 +1,11 @@
-import { ItemResponse } from "./models/ItemResponse";
+import { ItemsResponse } from "./models/ItemResponse";
 
 const baseUrl = "https://localhost:7245";
 
 export async function getItems(
   steamId: string,
   useMockResponse: boolean
-): Promise<ItemResponse[]> {
+): Promise<ItemsResponse> {
   try {
     const response = await fetch(
       `${baseUrl}/items/${steamId}?` +
@@ -18,11 +18,11 @@ export async function getItems(
       throw new Error(`HTTP error: ${response.status} ${response.statusText}`);
     }
 
-    const items: ItemResponse[] = await response.json();
+    const items: ItemsResponse = await response.json();
     return items;
   } catch (error) {
     console.error(`Failed to fetch items: ${error}`);
   }
 
-  return [];
+  return { items: [], totalBackpackSlots: 0 };
 }

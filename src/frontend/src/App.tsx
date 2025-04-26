@@ -1,23 +1,31 @@
 import { useState } from "react";
 import { getItems } from "./api";
-import "./App.css";
 import { Backpack } from "./Backpack";
 import { ItemModel } from "./models/ItemModel";
 import { ItemResponse } from "./models/ItemResponse";
+
+import "./App.css";
 
 function App() {
   const [loading, setLoading] = useState(false);
   const [useMockResponse, setUseMockResponse] = useState(false);
   const [steamId, setSteamId] = useState<string>();
-  const [items, setItems] = useState([] as ItemResponse[]);
-  const [filteredItems, setFilteredItems] = useState([] as ItemResponse[]);
+  const [items, setItems] = useState<ItemResponse[]>([]);
+  const [totalBackpackSlots, setTotalBackpackSlots] = useState(50);
+
+  const [filteredItems, setFilteredItems] = useState<ItemResponse[]>([]);
 
   const backpackItems: ItemModel[] = filteredItems.map((i) => ({
-    classId: i.classId,
+    id: i.id,
     name: i.name,
+    description: i.description,
     quantity: i.quantity,
     url: i.iconUrl,
-    tradable: i.tradable ?? true,
+    tradable: i.tradable,
+    level: i.level,
+    type: i.type,
+    uses: i.uses,
+    backpackIndex: i.backpackIndex,
   }));
 
   async function loadItems() {
@@ -27,9 +35,13 @@ function App() {
 
     setLoading(true);
     try {
-      const data = await getItems(steamId, useMockResponse);
-      setItems(data);
-      setFilteredItems(data);
+      const response = await getItems(steamId, useMockResponse);
+      const items = response.items.sort(
+        (a, b) => a.backpackIndex - b.backpackIndex
+      );
+      setItems(items);
+      setFilteredItems(items);
+      setTotalBackpackSlots(response.totalBackpackSlots);
     } finally {
       setLoading(false);
     }
@@ -77,7 +89,7 @@ function App() {
           )}
         </div>
       </header>
-      <Backpack items={backpackItems} />
+      <Backpack items={backpackItems} totalBackpackSlots={totalBackpackSlots} />
     </div>
   );
 }

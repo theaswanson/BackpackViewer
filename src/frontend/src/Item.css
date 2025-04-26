@@ -1,6 +1,6 @@
 .Item {
   position: relative;
-  border: 3px #ffe52a solid;
+  /* border: 3px #ffe52a solid; */
   border-radius: 0.6rem;
   background-color: #221e1b;
   width: 135px;
@@ -15,6 +15,15 @@
 
 .untradable {
   background-color: rgba(255, 0, 0, 0.2);
+}
+
+.unique {
+  border: 3px var(--tf2-colors-unique) solid;
+}
+
+.empty {
+  background-color: #3c352d;
+  border: 3px #3c352d solid;
 }
 
 .pill {

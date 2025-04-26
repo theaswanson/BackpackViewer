@@ -4,8 +4,6 @@ namespace BackpackViewer.Core
 {
     public interface IItemService
     {
-        Task<IEnumerable<ItemSummary>> GetItemsViaSteamCommunityAsync(ulong steamId);
-        Task<IEnumerable<ItemSummary>> GetItemsViaMockAsync(string mockResponseFile);
-        Task<IEnumerable<ItemSummary>> GetItemsViaWebAPIAsync(ulong steamId, string apiKey, string? playerItemsFile = null, string? itemSchemaFile = null);
+        Task<(IEnumerable<ItemSummary> Items, int BackpackSlots)> GetItemsAsync(ulong steamId, string apiKey, string? playerItemsFile = null, string? itemSchemaFile = null);
     }
 }

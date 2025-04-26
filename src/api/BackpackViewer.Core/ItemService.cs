@@ -1,134 +1,102 @@
 ﻿using BackpackViewer.Core.Models;
 using Microsoft.Extensions.Logging;
 using Steam.Models.GameEconomy;
-using System.Text.Json;
 
 namespace BackpackViewer.Core
 {
     public class ItemService : IItemService
     {
-        private readonly IWebApiBackpackLoader _webAPIBackpackLoader;
-        private readonly ISteamCommunityBackpackLoader _steamCommunityBackpackLoader;
+        private readonly ITf2BackpackLoader _tf2BackpackLoader;
         private readonly ILogger<ItemService> _logger;
 
         public ItemService(
-            IWebApiBackpackLoader webAPIBackpackLoader,
-            ISteamCommunityBackpackLoader steamCommunityBackpackLoader,
+            ITf2BackpackLoader tf2BackpackLoader,
             ILogger<ItemService> logger)
         {
-            _webAPIBackpackLoader = webAPIBackpackLoader;
-            _steamCommunityBackpackLoader = steamCommunityBackpackLoader;
+            _tf2BackpackLoader = tf2BackpackLoader;
             _logger = logger;
         }
 
-        public async Task<IEnumerable<ItemSummary>> GetItemsViaWebAPIAsync(ulong steamId, string apiKey, string? playerItemsFile = null, string? itemSchemaFile = null)
+        public async Task<(IEnumerable<ItemSummary> Items, int BackpackSlots)> GetItemsAsync(ulong steamId, string apiKey, string? playerItemsFile = null, string? itemSchemaFile = null)
         {
-            var itemResponse = playerItemsFile == null
-                ? await _webAPIBackpackLoader.GetItems(apiKey, steamId)
-                : await _webAPIBackpackLoader.GetMockItems(playerItemsFile);
+            var backpackResponse = playerItemsFile != null
+                ? await _tf2BackpackLoader.GetMockItems(playerItemsFile)
+                : await _tf2BackpackLoader.GetItems(apiKey, steamId);
 
-            var schemaResponse = itemSchemaFile == null
-                ? await _webAPIBackpackLoader.GetSchema(apiKey)
-                : await _webAPIBackpackLoader.GetMockSchema(itemSchemaFile);
+            var itemSchemaResponse = (itemSchemaFile != null
+                ? await _tf2BackpackLoader.GetMockSchema(itemSchemaFile)
+                : await _tf2BackpackLoader.GetSchema(apiKey)).ToArray();
 
-            if (!schemaResponse.Any())
-            {
-                return Enumerable.Empty<ItemSummary>();
-            }
+            var itemSchemaDictionary = itemSchemaResponse.ToDictionary(item => item.DefIndex, item => item);
+            
+            var items = itemSchemaResponse.Any() ?
+                GetItemSummaries(backpackResponse.Items, itemSchemaDictionary)
+                : Enumerable.Empty<ItemSummary>();
 
-            return ParseWebApiResponse(itemResponse, schemaResponse);
+            return (items, Convert.ToInt32(backpackResponse.NumBackpackSlots));
+        }
 
-            static IEnumerable<ItemSummary> ParseWebApiResponse(EconItemResultModel response, IEnumerable<SteamWebAPI2.Models.GameEconomy.SchemaItem> schemaResponse)
-            {
-                var groupedItems = response.Items
-                    .GroupBy(
-                        item => item.DefIndex,
-                        item => item,
-                        (key, items) => new
-                        {
-                            DefIndex = key,
-                            Quantity = items.Count(),
-                            Tradable = items.All(i => !i.FlagCannotTrade.HasValue || !i.FlagCannotTrade.Value)
-                        })
-                    .OrderBy(i => i.DefIndex);
-
-                return groupedItems.Select(itemGroup =>
+        private IEnumerable<ItemSummary> GetItemSummaries(
+            IReadOnlyCollection<EconItemModel> backpackItems,
+            Dictionary<uint, SteamWebAPI2.Models.GameEconomy.SchemaItem> itemSchema,
+            bool groupDuplicates = false)
+        {
+            return GetBackpackItems(backpackItems, groupDuplicates)
+                .Select(itemGroup =>
                 {
-                    var schemaItem = schemaResponse.SingleOrDefault(i => i.DefIndex == itemGroup.DefIndex);
+                    itemSchema.TryGetValue(itemGroup.DefIndex, out var schemaItem);
 
                     return new ItemSummary
                     {
-                        ClassId = string.Empty,
+                        Id = itemGroup.DefIndex.ToString(),
+                        Quantity = itemGroup.TotalNumberOfItems,
+                        Tradable = itemGroup.Tradable,
+                        // TODO: fix this to include more items than just "tools"
+                        Uses = schemaItem?.ItemTypeName == "Tool" ? Convert.ToInt32(itemGroup.Quantity) : null,
+                        Level = Convert.ToInt32(itemGroup.Level),
                         Name = schemaItem?.ItemName ?? schemaItem?.Name ?? "Unknown item",
+                        Description = schemaItem?.ItemDescription ?? "",
                         Type = schemaItem?.ItemTypeName ?? "Unknown type",
-                        Quantity = itemGroup.Quantity,
                         IconUrl = schemaItem?.ImageUrlLarge ?? string.Empty,
-                        Tradable = itemGroup.Tradable
+                        BackpackIndex = itemGroup.BackpackIndex
                     };
-                });
-            }
+                })
+                .ToArray();
         }
 
-        public async Task<IEnumerable<ItemSummary>> GetItemsViaSteamCommunityAsync(ulong steamId)
+        private IEnumerable<BackpackItem> GetBackpackItems(IReadOnlyCollection<EconItemModel> backpackItems, bool groupDuplicates)
         {
-            _logger.LogInformation("Fetching items for SteamID: {steamId}", steamId);
-
-            var response = await _steamCommunityBackpackLoader.GetItems(steamId);
-
-            EnsureSuccessfulResponse(response);
-
-            _logger.LogInformation("Total inventory count for SteamID:{steamId} is {totalInventoryCount}", steamId, response.TotalInventoryCount);
-
-            return ParseSteamItemsResponse(response);
-
-            static void EnsureSuccessfulResponse(SteamItemsResponse response)
+            if (groupDuplicates)
             {
-                if (response.Success != 1)
-                {
-                    throw new Exception("Item response was unsuccessful.");
-                }
+                return GroupedItems(backpackItems);
             }
-        }
 
-        public async Task<IEnumerable<ItemSummary>> GetItemsViaMockAsync(string mockResponseFile)
-        {
-            _logger.LogInformation("Returning mocked response from {mockResponseFile}", mockResponseFile);
+            return backpackItems.Select(item => new BackpackItem(item));
 
-            var responseString = await File.ReadAllBytesAsync(mockResponseFile);
-            var response = await JsonSerializer.DeserializeAsync<SteamItemsResponse>(
-                new MemoryStream(responseString),
-                options: new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            IEnumerable<BackpackItem> GroupedItems(IReadOnlyCollection<EconItemModel> items) =>
+                items
+                    .GroupBy(
+                        item => item.DefIndex,
+                        item => item,
+                        (key, items) =>
+                        {
+                            var firstItem = items.First();
+                            var firstTradable = BackpackItem.ItemIsTradable(firstItem);
 
-            return ParseSteamItemsResponse(response);
-        }
+                            if (!items.All(item => BackpackItem.ItemIsTradable(item) == firstTradable))
+                            {
+                                _logger.LogError("Grouped items have differing tradable qualities, {defIndex}",
+                                    firstItem.DefIndex);
+                            }
 
-        private static IEnumerable<ItemSummary> ParseSteamItemsResponse(SteamItemsResponse response)
-        {
-            var groupedItems = response.Assets
-                .GroupBy(
-                    item => item.ClassId,
-                    item => item,
-                    (key, assets) => new
-                    {
-                        ClassId = key,
-                        Quantity = assets.Count()
-                    }
-                );
-
-            return groupedItems.Select(itemGroup =>
-            {
-                var description = response.Descriptions.FirstOrDefault(d => d.ClassId == itemGroup.ClassId);
-
-                return new ItemSummary
-                {
-                    ClassId = itemGroup.ClassId,
-                    Name = description?.Name,
-                    Type = description?.Type,
-                    Quantity = itemGroup.Quantity,
-                    IconUrl = $"https://community.cloudflare.steamstatic.com/economy/image/{description?.IconUrl}",
-                    Tradable = description?.Tradable == 1
-                };
-            });
+                            return new BackpackItem(
+                                key,
+                                items.Select(i => i.Level).Max(),
+                                firstItem.Quantity,
+                                items.All(BackpackItem.ItemIsTradable),
+                                BackpackItem.GetBackpackIndex(firstItem.Inventory),
+                                items.Count());
+                        });
         }
     }
 }

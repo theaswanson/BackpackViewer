@@ -2,7 +2,7 @@ using BackpackViewer.Core;
 using BackpackViewer.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BackbackViewer.API.Controllers
+namespace BackpackViewer.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -27,15 +27,21 @@ namespace BackbackViewer.API.Controllers
 
         [HttpGet]
         [Route("{steamId}")]
-        public async Task<IEnumerable<ItemSummary>> Get(ulong steamId, [FromQuery] bool useMockResponse)
+        public async Task<ItemsResponse> Get(ulong steamId, [FromQuery] bool useMockResponse)
         {
             if (steamId <= 0) throw new ArgumentOutOfRangeException(nameof(steamId));
 
-            return await _itemService.GetItemsViaWebAPIAsync(
+            var (items, backpackSlots) = await _itemService.GetItemsAsync(
                 steamId,
                 _configuration.GetRequiredSection("Steam").GetValue<string>("ApiKey"),
                 useMockResponse ? Path.Combine(_env.WebRootPath, "player-items.json") : null,
                 useMockResponse ? Path.Combine(_env.WebRootPath, "full-schema.json") : null);
+
+            return new ItemsResponse
+            {
+                Items = items,
+                TotalBackpackSlots = backpackSlots
+            };
         }
     }
 }
