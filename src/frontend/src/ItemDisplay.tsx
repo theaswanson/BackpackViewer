@@ -17,13 +17,11 @@ const pageSize = columnsPerPage * rowsPerPage;
 
 const PageButton = ({
   pageNumber,
-  totalItemCount,
   items,
   isActive,
   setCurrentPage,
 }: {
   pageNumber: number;
-  totalItemCount: number;
   items: ItemModel[];
   isActive: boolean;
   setCurrentPage: (num: number) => void;
@@ -112,7 +110,6 @@ const ItemDisplay = ({ items, totalBackpackSlots }: ItemDisplayProps) => {
             isActive={currentPage === pageNumber}
             pageNumber={pageNumber}
             items={items}
-            totalItemCount={totalBackpackSlots}
             setCurrentPage={setCurrentPage}
             key={pageNumber}
           />

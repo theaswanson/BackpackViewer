@@ -1,4 +1,3 @@
-using BackpackViewer;
 using BackpackViewer.Core;
 
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
@@ -27,7 +26,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: corsPolicyName, policy =>
     {
-        policy.WithOrigins("http://localhost:3000", "https://localhost:3000");
+        policy.WithOrigins("http://localhost:5173", "https://localhost:5173");
     });
 });
 
@@ -43,11 +42,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseCors(corsPolicyName);
-
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();
