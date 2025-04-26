@@ -9,6 +9,7 @@ import { ItemModel } from "./models/ItemModel";
 type ItemDisplayProps = {
   items: ItemModel[];
   totalBackpackSlots: number;
+  searchTerm: string;
 };
 
 const columnsPerPage = 10;
@@ -19,14 +20,16 @@ const PageButton = ({
   pageNumber,
   items,
   isActive,
+  isFiltered,
   setCurrentPage,
 }: {
   pageNumber: number;
   items: ItemModel[];
   isActive: boolean;
+  isFiltered: boolean;
   setCurrentPage: (num: number) => void;
 }) => {
-  const itemsOnPage = itemsForPage(items, pageNumber).length;
+  const itemsOnPage = itemsForPage(items, pageNumber, isFiltered).length;
 
   return (
     <button
@@ -44,16 +47,36 @@ const PageButton = ({
   );
 };
 
-const itemsForPage = (items: ItemModel[], page: number) =>
-  items.filter(
-    (i) =>
-      i.backpackIndex > page * pageSize &&
-      i.backpackIndex <= (page + 1) * pageSize
-  );
+const itemsForPage = (items: ItemModel[], page: number, isFiltered: boolean) =>
+  /**
+   * If the backpack is filtered, then we don't want to display the items according to their
+   * backpack slot.
+   */
+  isFiltered
+    ? items.slice(page * pageSize, (page + 1) * pageSize)
+    : items.filter(
+        (i) =>
+          i.backpackIndex > page * pageSize &&
+          i.backpackIndex <= (page + 1) * pageSize
+      );
 
 type RenderedItem = ItemModel | null;
 
-const getRenderedItems = (items: ItemModel[], page: number): RenderedItem[] => {
+const getRenderedItems = (
+  items: ItemModel[],
+  page: number,
+  isFiltered: boolean
+): RenderedItem[] => {
+  if (isFiltered) {
+    if (items.length == pageSize) {
+      return items;
+    }
+
+    const emptyItemsCount = pageSize - items.length;
+
+    return [...items, ...Array.from({ length: emptyItemsCount }, () => null)];
+  }
+
   const result: RenderedItem[] = [];
 
   for (let i = 1; i <= pageSize; i++) {
@@ -66,7 +89,11 @@ const getRenderedItems = (items: ItemModel[], page: number): RenderedItem[] => {
   return result;
 };
 
-const ItemDisplay = ({ items, totalBackpackSlots }: ItemDisplayProps) => {
+const ItemDisplay = ({
+  items,
+  searchTerm,
+  totalBackpackSlots,
+}: ItemDisplayProps) => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const numberOfPages = Math.ceil(totalBackpackSlots / pageSize);
@@ -76,9 +103,21 @@ const ItemDisplay = ({ items, totalBackpackSlots }: ItemDisplayProps) => {
     (_, index) => index
   );
 
-  const displayedItems = itemsForPage(items, currentPage);
+  const isFiltered = searchTerm.length > 0;
 
-  const renderedItems = getRenderedItems(displayedItems, currentPage);
+  const filteredItems = isFiltered
+    ? items.filter((item) =>
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    : items;
+
+  const displayedItems = itemsForPage(filteredItems, currentPage, isFiltered);
+
+  const renderedItems = getRenderedItems(
+    displayedItems,
+    currentPage,
+    isFiltered
+  );
 
   return (
     <div className='ItemDisplay'>
@@ -109,7 +148,8 @@ const ItemDisplay = ({ items, totalBackpackSlots }: ItemDisplayProps) => {
           <PageButton
             isActive={currentPage === pageNumber}
             pageNumber={pageNumber}
-            items={items}
+            items={filteredItems}
+            isFiltered={isFiltered}
             setCurrentPage={setCurrentPage}
             key={pageNumber}
           />

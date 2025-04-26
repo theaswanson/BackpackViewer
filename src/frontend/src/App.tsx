@@ -9,7 +9,8 @@ import "./App.css";
 function App() {
   const [loading, setLoading] = useState(false);
   const [useMockResponse, setUseMockResponse] = useState(false);
-  const [steamId, setSteamId] = useState<string>();
+  const [steamId, setSteamId] = useState<string>("");
+  const [searchTerm, setSearchTerm] = useState<string>("");
   const [items, setItems] = useState<ItemResponse[]>([]);
   const [totalBackpackSlots, setTotalBackpackSlots] = useState(50);
 
@@ -47,13 +48,6 @@ function App() {
     }
   }
 
-  function search(name: string) {
-    const filteredItems = items.filter((i) =>
-      i.name.toLowerCase().includes(name.toLowerCase())
-    );
-    setFilteredItems(filteredItems);
-  }
-
   return (
     <div className='App'>
       <header className='App-header'>
@@ -82,14 +76,19 @@ function App() {
           {items && items.length > 0 && (
             <input
               placeholder='Search...'
+              value={searchTerm}
               onChange={(e) => {
-                search(e.target.value);
+                setSearchTerm(e.target.value);
               }}
             />
           )}
         </div>
       </header>
-      <Backpack items={backpackItems} totalBackpackSlots={totalBackpackSlots} />
+      <Backpack
+        items={backpackItems}
+        searchTerm={searchTerm.trim()}
+        totalBackpackSlots={totalBackpackSlots}
+      />
     </div>
   );
 }
