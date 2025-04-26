@@ -1,0 +1,20 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.search h3 {
+  color: #867d6d;
+}
+
+.search input {
+  background-color: #fbeccb;
+  border: none;
+  outline: none;
+  font-family: "TF2 Secondary";
+  font-size: 1.5rem;
+  color: #7f705d;
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.6rem;
+}

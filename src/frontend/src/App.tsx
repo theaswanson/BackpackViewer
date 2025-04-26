@@ -10,13 +10,10 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [useMockResponse, setUseMockResponse] = useState(false);
   const [steamId, setSteamId] = useState<string>("");
-  const [searchTerm, setSearchTerm] = useState<string>("");
   const [items, setItems] = useState<ItemResponse[]>([]);
   const [totalBackpackSlots, setTotalBackpackSlots] = useState(50);
 
-  const [filteredItems, setFilteredItems] = useState<ItemResponse[]>([]);
-
-  const backpackItems: ItemModel[] = filteredItems.map((i) => ({
+  const backpackItems: ItemModel[] = items.map((i) => ({
     id: i.id,
     name: i.name,
     description: i.description,
@@ -41,7 +38,6 @@ function App() {
         (a, b) => a.backpackIndex - b.backpackIndex
       );
       setItems(items);
-      setFilteredItems(items);
       setTotalBackpackSlots(response.totalBackpackSlots);
     } finally {
       setLoading(false);
@@ -73,22 +69,9 @@ function App() {
           <button onClick={loadItems} disabled={loading}>
             Get Items
           </button>
-          {items && items.length > 0 && (
-            <input
-              placeholder='Search...'
-              value={searchTerm}
-              onChange={(e) => {
-                setSearchTerm(e.target.value);
-              }}
-            />
-          )}
         </div>
       </header>
-      <Backpack
-        items={backpackItems}
-        searchTerm={searchTerm.trim()}
-        totalBackpackSlots={totalBackpackSlots}
-      />
+      <Backpack items={backpackItems} totalBackpackSlots={totalBackpackSlots} />
     </div>
   );
 }

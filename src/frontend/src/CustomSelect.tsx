@@ -1,5 +1,6 @@
-import { HTMLAttributes, ReactNode, useState } from "react";
+import { CSSProperties, HTMLAttributes, ReactNode, useState } from "react";
 import { Chevron } from "./Chevron";
+import "./CustomSelect.css";
 
 const SelectOption = ({
   children,
@@ -14,17 +15,19 @@ interface IProps<T> {
   options: readonly T[];
   selected?: T;
   onSelect: (option: T) => void;
+  style?: CSSProperties;
 }
 
 export const CustomSelect = <T extends string>({
   options,
   selected,
   onSelect,
+  style,
 }: IProps<T>) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className='select'>
+    <div className='select' style={style}>
       <div
         className='select-option main'
         onClick={() => setIsOpen((open) => !open)}

@@ -24,12 +24,12 @@ export type SortOption = (typeof SortOptions)[number];
 export const Backpack = ({
   items,
   totalBackpackSlots,
-  searchTerm,
 }: {
   items: ItemModel[];
   totalBackpackSlots: number;
-  searchTerm: string;
 }) => {
+  const [searchTerm, setSearchTerm] = useState<string>("");
+
   const [borderOption, setBorderOption] = useState<BorderOption>(
     "Show quality color borders"
   );
@@ -39,6 +39,8 @@ export const Backpack = ({
   return (
     <div className='backpack'>
       <Header
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
         borderOption={borderOption}
         setBorderOption={setBorderOption}
         sortOption={sortOption}
@@ -46,7 +48,7 @@ export const Backpack = ({
       />
       <ItemDisplay
         items={items}
-        searchTerm={searchTerm}
+        searchTerm={searchTerm.trim()}
         totalBackpackSlots={totalBackpackSlots}
       />
     </div>
