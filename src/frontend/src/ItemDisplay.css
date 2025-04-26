@@ -39,6 +39,7 @@
 }
 
 .pageButton.active {
+  color: #ece5c8;
   background-color: #934739;
 }
 
