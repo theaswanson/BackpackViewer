@@ -1,13 +1,27 @@
-import { ReactNode, useState } from "react";
+import { HTMLAttributes, ReactNode, useState } from "react";
 import { Chevron } from "./Chevron";
 
-const SelectOption = ({ children }: { children: ReactNode }) => (
-  <div className='select-option'>{children}</div>
+const SelectOption = ({
+  children,
+  ...rest
+}: { children: ReactNode } & HTMLAttributes<HTMLDivElement>) => (
+  <div {...rest} className='select-option'>
+    {children}
+  </div>
 );
 
-export const CustomSelect = ({ options }: { options: string[] }) => {
+interface IProps<T> {
+  options: readonly T[];
+  selected?: T;
+  onSelect: (option: T) => void;
+}
+
+export const CustomSelect = <T extends string>({
+  options,
+  selected,
+  onSelect,
+}: IProps<T>) => {
   const [isOpen, setIsOpen] = useState(false);
-  const selectedItem = options[0];
 
   return (
     <div className='select'>
@@ -15,13 +29,21 @@ export const CustomSelect = ({ options }: { options: string[] }) => {
         className='select-option main'
         onClick={() => setIsOpen((open) => !open)}
       >
-        {selectedItem} <Chevron />
+        {selected} <Chevron />
       </div>
 
       {isOpen ? (
         <div className='dropdown'>
           {options.map((option) => (
-            <SelectOption>{option}</SelectOption>
+            <SelectOption
+              onClick={() => {
+                setIsOpen(false);
+                onSelect(option);
+              }}
+              key={option}
+            >
+              {option}
+            </SelectOption>
           ))}
         </div>
       ) : undefined}
