@@ -4,7 +4,22 @@ A simple app for viewing TF2 inventories.
 
 Built with React and .NET.
 
+## Screenshot
+
+![Screenshot](./doc/screenshot.png)
+
 ## Getting Started
 
-1. Start the API by opening `src/api/BackpackViewer.sln` in Visual Studio and running BackpackViewer.API.
-2. Start the frontend by running `npm start` in `src/frontend`.
+### Run the API
+
+1. `cd src/api`
+2. `dotnet build`
+3. `dotnet run --project ./BackpackViewer.API/BackpackViewer.API.csproj`
+
+### Run the frontend
+
+1. `cd src/frontend`
+2. `npm i`
+3. `npm run dev`
+
+The app should now be accessible at `http://localhost:5173/`.
