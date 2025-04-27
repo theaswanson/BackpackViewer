@@ -20,8 +20,57 @@
 }
 
 .item-desc h1 {
-  color: var(--tf2-colors-unique);
+  --title-color: var(--tf2-colors-unique);
+  color: var(--title-color);
   font-size: 2rem;
+}
+
+.unique h1 {
+  --title-color: var(--tf2-colors-unique);
+}
+
+.normal h1 {
+  --title-color: var(--tf2-colors-normal);
+}
+
+.vintage h1 {
+  --title-color: var(--tf2-colors-vintage);
+}
+
+.genuine h1 {
+  --title-color: var(--tf2-colors-genuine);
+}
+
+.strange h1 {
+  --title-color: var(--tf2-colors-strange);
+}
+
+.unusual h1 {
+  --title-color: var(--tf2-colors-unusual);
+}
+
+.haunted h1 {
+  --title-color: var(--tf2-colors-haunted);
+}
+
+.collectors h1 {
+  --title-color: var(--tf2-colors-collectors);
+}
+
+.decorated h1 {
+  --title-color: var(--tf2-colors-decorated);
+}
+
+.community h1 {
+  --title-color: var(--tf2-colors-community);
+}
+
+.selfmade h1 {
+  --title-color: var(--tf2-colors-selfmade);
+}
+
+.valve h1 {
+  --title-color: var(--tf2-colors-valve);
 }
 
 .item-desc h2 {

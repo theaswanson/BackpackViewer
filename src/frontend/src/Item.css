@@ -1,6 +1,7 @@
 .Item {
   position: relative;
-  /* border: 3px #ffe52a solid; */
+  --item-border-color: #3c352d;
+  border: 3px var(--item-border-color) solid;
   border-radius: 0.6rem;
   background-color: #221e1b;
   width: 135px;
@@ -18,12 +19,56 @@
 }
 
 .unique {
-  border: 3px var(--tf2-colors-unique) solid;
+  --item-border-color: var(--tf2-colors-unique);
+}
+
+.normal {
+  --item-border-color: var(--tf2-colors-normal);
+}
+
+.vintage {
+  --item-border-color: var(--tf2-colors-vintage);
+}
+
+.genuine {
+  --item-border-color: var(--tf2-colors-genuine);
+}
+
+.strange {
+  --item-border-color: var(--tf2-colors-strange);
+}
+
+.unusual {
+  --item-border-color: var(--tf2-colors-unusual);
+}
+
+.haunted {
+  --item-border-color: var(--tf2-colors-haunted);
+}
+
+.collectors {
+  --item-border-color: var(--tf2-colors-collectors);
+}
+
+.decorated {
+  --item-border-color: var(--tf2-colors-decorated);
+}
+
+.community {
+  --item-border-color: var(--tf2-colors-community);
+}
+
+.selfmade {
+  --item-border-color: var(--tf2-colors-selfmade);
+}
+
+.valve {
+  --item-border-color: var(--tf2-colors-valve);
 }
 
 .empty {
+  --item-border-color: #3c352d;
   background-color: #3c352d;
-  border: 3px #3c352d solid;
 }
 
 .pill {

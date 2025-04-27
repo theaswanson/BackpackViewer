@@ -28,10 +28,8 @@ namespace BackpackViewer.Core
                 : await _tf2BackpackLoader.GetSchema(apiKey)).ToArray();
 
             var itemSchemaDictionary = itemSchemaResponse.ToDictionary(item => item.DefIndex, item => item);
-            
-            var items = itemSchemaResponse.Any() ?
-                GetItemSummaries(backpackResponse.Items, itemSchemaDictionary)
-                : Enumerable.Empty<ItemSummary>();
+
+            var items = GetItemSummaries(backpackResponse.Items, itemSchemaDictionary);
 
             return (items, Convert.ToInt32(backpackResponse.NumBackpackSlots));
         }
@@ -58,10 +56,18 @@ namespace BackpackViewer.Core
                         Description = schemaItem?.ItemDescription ?? "",
                         Type = schemaItem?.ItemTypeName ?? "Unknown type",
                         IconUrl = schemaItem?.ImageUrlLarge ?? string.Empty,
-                        BackpackIndex = itemGroup.BackpackIndex
+                        BackpackIndex = itemGroup.BackpackIndex,
+                        Quality = MapItemQuality(itemGroup.Quality)
                     };
                 })
                 .ToArray();
+        }
+
+        private static ItemQuality MapItemQuality(uint quality)
+        {
+            var success = Enum.TryParse<ItemQuality>(quality.ToString(), out var itemQuality);
+            
+            return success ? itemQuality : ItemQuality.Unknown;
         }
 
         private IEnumerable<BackpackItem> GetBackpackItems(IReadOnlyCollection<EconItemModel> backpackItems, bool groupDuplicates)
@@ -95,7 +101,8 @@ namespace BackpackViewer.Core
                                 firstItem.Quantity,
                                 items.All(BackpackItem.ItemIsTradable),
                                 BackpackItem.GetBackpackIndex(firstItem.Inventory),
-                                items.Count());
+                                items.Count(),
+                                firstItem.Quality);
                         });
         }
     }

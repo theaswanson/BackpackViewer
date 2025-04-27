@@ -1,6 +1,9 @@
+import { ItemQuality } from "./ItemQuality";
+
 export interface ItemModel {
   id: string;
   name: string;
+  displayName: string;
   type: string;
   description: string;
   quantity: number;
@@ -9,4 +12,5 @@ export interface ItemModel {
   level: number | null;
   uses: number | null;
   backpackIndex: number;
+  quality: ItemQuality;
 }

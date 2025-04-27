@@ -19,7 +19,18 @@
 }
 
 :root {
+  --tf2-colors-normal: #b2b2b2;
   --tf2-colors-unique: #ffd700;
+  --tf2-colors-vintage: #476291;
+  --tf2-colors-genuine: #4d7455;
+  --tf2-colors-strange: #cf6a32;
+  --tf2-colors-unusual: #8650ac;
+  --tf2-colors-haunted: #38f3ab;
+  --tf2-colors-collectors: #aa0000;
+  --tf2-colors-decorated: #fafafa;
+  --tf2-colors-community: #70b04a;
+  --tf2-colors-selfmade: #70b04a;
+  --tf2-colors-valve: #a50f79;
 }
 
 body {

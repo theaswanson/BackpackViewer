@@ -10,9 +10,10 @@ public class BackpackItem
     public bool Tradable { get; }
     public int BackpackIndex { get; }
     public int TotalNumberOfItems { get; }
+    public uint Quality { get; }
 
     public BackpackItem(uint defIndex, uint level, uint quantity, bool tradable, int backpackIndex,
-        int totalNumberOfItems)
+        int totalNumberOfItems, uint quality)
     {
         DefIndex = defIndex;
         Level = level;
@@ -20,10 +21,11 @@ public class BackpackItem
         Tradable = tradable;
         BackpackIndex = backpackIndex;
         TotalNumberOfItems = totalNumberOfItems;
+        Quality = quality;
     }
 
     public BackpackItem(EconItemModel item) : this(item.DefIndex, item.Level, item.Quantity, ItemIsTradable(item),
-        GetBackpackIndex(item.Inventory), 1)
+        GetBackpackIndex(item.Inventory), 1, item.Quality)
     {
     }
 

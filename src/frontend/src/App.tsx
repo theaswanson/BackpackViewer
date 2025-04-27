@@ -5,6 +5,36 @@ import { ItemModel } from "./models/ItemModel";
 import { ItemResponse } from "./models/ItemResponse";
 
 import "./App.css";
+import { ItemQuality } from "./models/ItemQuality";
+
+const getQualityName = (quality: ItemQuality) => {
+  switch (quality) {
+    case ItemQuality.SelfMade:
+      return "Self-Made";
+    case ItemQuality.Collectors:
+      return "Collector's";
+    default:
+      return ItemQuality[quality];
+  }
+};
+
+const getItemDisplayName = (item: ItemResponse): string => {
+  switch (item.quality) {
+    case ItemQuality.Genuine:
+    case ItemQuality.Vintage:
+    case ItemQuality.Unusual:
+    case ItemQuality.Community:
+    case ItemQuality.Valve:
+    case ItemQuality.SelfMade:
+    case ItemQuality.Strange:
+    case ItemQuality.Haunted:
+    case ItemQuality.Collectors:
+      return `${getQualityName(item.quality)} ${item.name}`;
+
+    default:
+      return item.name;
+  }
+};
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -16,6 +46,7 @@ function App() {
   const backpackItems: ItemModel[] = items.map((i) => ({
     id: i.id,
     name: i.name,
+    displayName: getItemDisplayName(i),
     description: i.description,
     quantity: i.quantity,
     url: i.iconUrl,
@@ -24,6 +55,7 @@ function App() {
     type: i.type,
     uses: i.uses,
     backpackIndex: i.backpackIndex,
+    quality: i.quality,
   }));
 
   async function loadItems() {

@@ -1,3 +1,5 @@
+import { ItemQuality } from "./ItemQuality";
+
 export type ItemsResponse = {
   items: ItemResponse[];
   totalBackpackSlots: number;
@@ -14,4 +16,5 @@ export interface ItemResponse {
   level: number | null;
   uses: number | null;
   backpackIndex: number;
+  quality: ItemQuality;
 }

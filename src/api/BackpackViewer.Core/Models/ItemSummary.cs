@@ -20,5 +20,6 @@
         /// </summary>
         public int? Uses { get; set; }
         public int BackpackIndex { get; set; }
+        public ItemQuality Quality { get; set; }
     }
 }

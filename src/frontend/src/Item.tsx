@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import "./Item.css";
 import { ItemModel } from "./models/ItemModel";
+import { ItemQuality } from "./models/ItemQuality";
 import { Pill } from "./Pill";
 
 interface ItemProps {
@@ -12,11 +13,14 @@ function Item({ id, item }: ItemProps) {
   return (
     <div
       id={id}
-      className={clsx("Item", {
-        empty: !item,
-        unique: !!item,
-        untradable: item && !item.tradable,
-      })}
+      className={clsx(
+        "Item",
+        {
+          empty: !item,
+          untradable: item && !item.tradable,
+        },
+        item && ItemQuality[item.quality].toLowerCase()
+      )}
     >
       {item && (
         <>
