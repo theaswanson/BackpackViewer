@@ -1,6 +1,6 @@
 import { ItemsResponse } from "./models/ItemResponse";
 
-const baseUrl = "https://localhost:7245";
+const baseUrl = import.meta.env.VITE_API_URL;
 
 export async function getItems(
   steamId: string,
