@@ -22,4 +22,11 @@ Built with React and .NET.
 2. `npm i`
 3. `npm run dev`
 
-The app should now be accessible at `http://localhost:5173/`.
+The web app should now be accessible at `http://localhost:5173/`.
+
+## Getting Started (Docker)
+
+1. `cd src`
+2. `docker compose up`
+
+The web app should now be accessible at `http://localhost:5173/`.

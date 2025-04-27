@@ -1,0 +1,16 @@
+name: tf2-backpack-viewer
+services:
+  api:
+    build: './api'
+    ports:
+      - "7245:8080"
+
+  frontend:
+    build:
+      context: './frontend'
+      args:
+      - VITE_API_URL=http://localhost:7245
+    ports:
+    - "5173:8080"
+    depends_on:
+      - api
