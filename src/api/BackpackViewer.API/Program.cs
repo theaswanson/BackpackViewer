@@ -7,11 +7,7 @@ var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 });
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 builder.Services.AddTransient<ITf2BackpackLoader, Tf2BackpackLoader>();
 builder.Services.AddTransient<IItemService, ItemService>();
@@ -35,12 +31,6 @@ builder.Services.AddCors();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
 app.UseHttpsRedirection();
 app.UseCors(corsPolicyName);
 app.UseAuthorization();
