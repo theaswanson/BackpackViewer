@@ -4,8 +4,10 @@
     {
         public string Id { get; set; }
         public string Name { get; set; }
+        public string? CustomName { get; set; }
         public string Type { get; set; }
         public string Description { get; set; }
+        public string? CustomDescription { get; set; }
         /// <summary>
         /// When grouping items, represents the number of duplicates in the user's backpack.
         /// When not grouping items, this will always be 1.

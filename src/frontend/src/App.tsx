@@ -47,7 +47,10 @@ function App() {
     id: i.id,
     name: i.name,
     displayName: getItemDisplayName(i),
+    customName: i.customName === null ? undefined : i.customName,
     description: i.description,
+    customDescription:
+      i.customDescription === null ? undefined : i.customDescription,
     quantity: i.quantity,
     url: i.iconUrl,
     tradable: i.tradable,

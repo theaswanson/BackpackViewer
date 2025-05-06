@@ -106,8 +106,13 @@ const ItemDisplay = ({
   const isFiltered = searchTerm.length > 0;
 
   const filteredItems = isFiltered
-    ? items.filter((item) =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    ? items.filter(
+        (item) =>
+          item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.customName?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.customDescription
+            ?.toLowerCase()
+            .includes(searchTerm.toLowerCase())
       )
     : items;
 

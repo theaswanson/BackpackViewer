@@ -11,9 +11,11 @@ public class BackpackItem
     public int BackpackIndex { get; }
     public int TotalNumberOfItems { get; }
     public uint Quality { get; }
+    public string? CustomName { get; }
+    public string? CustomDescription { get; }
 
     public BackpackItem(uint defIndex, uint level, uint quantity, bool tradable, int backpackIndex,
-        int totalNumberOfItems, uint quality)
+        int totalNumberOfItems, uint quality, string? customName = null, string? customDescription = null)
     {
         DefIndex = defIndex;
         Level = level;
@@ -22,10 +24,12 @@ public class BackpackItem
         BackpackIndex = backpackIndex;
         TotalNumberOfItems = totalNumberOfItems;
         Quality = quality;
+        CustomName = customName;
+        CustomDescription = customDescription;
     }
 
     public BackpackItem(EconItemModel item) : this(item.DefIndex, item.Level, item.Quantity, ItemIsTradable(item),
-        GetBackpackIndex(item.Inventory), 1, item.Quality)
+        GetBackpackIndex(item.Inventory), 1, item.Quality, GetCustomName(item), GetCustomDescription(item))
     {
     }
 
@@ -54,5 +58,21 @@ public class BackpackItem
         var backpackIndex = Convert.ToInt32(backpackSlot16);
 
         return backpackIndex;
+    }
+
+    public static string? GetCustomName(EconItemModel item) => GetAttributeValue(item, 500);
+
+    public static string? GetCustomDescription(EconItemModel item) => GetAttributeValue(item, 501);
+
+    public static string? GetAttributeValue(EconItemModel item, uint defIndex)
+    {
+        if (item.Attributes is null || item.Attributes.Count == 0)
+        {
+            return null;
+        }
+
+        var attribute = item.Attributes.SingleOrDefault(a => a.DefIndex == defIndex);
+
+        return attribute?.Value.ToString();
     }
 }

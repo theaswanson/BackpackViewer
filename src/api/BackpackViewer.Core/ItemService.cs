@@ -53,7 +53,9 @@ namespace BackpackViewer.Core
                         Uses = schemaItem != null && ShouldDisplayQuantity(itemGroup, schemaItem) ? Convert.ToInt32(itemGroup.Quantity) : null,
                         Level = Convert.ToInt32(itemGroup.Level),
                         Name = schemaItem?.ItemName ?? schemaItem?.Name ?? "Unknown item",
+                        CustomName = itemGroup.CustomName,
                         Description = schemaItem?.ItemDescription ?? "",
+                        CustomDescription = itemGroup.CustomDescription,
                         Type = schemaItem?.ItemTypeName ?? "Unknown type",
                         IconUrl = schemaItem?.ImageUrlLarge ?? string.Empty,
                         BackpackIndex = itemGroup.BackpackIndex,
@@ -79,12 +81,10 @@ namespace BackpackViewer.Core
             return isTool || isConsumable;
         }
 
-        private static ItemQuality MapItemQuality(uint quality)
-        {
-            var success = Enum.TryParse<ItemQuality>(quality.ToString(), out var itemQuality);
-            
-            return success ? itemQuality : ItemQuality.Unknown;
-        }
+        private static ItemQuality MapItemQuality(uint quality) =>
+            Enum.TryParse<ItemQuality>(quality.ToString(), out var itemQuality)
+                ? itemQuality
+                : ItemQuality.Unknown;
 
         private IEnumerable<BackpackItem> GetBackpackItems(IReadOnlyCollection<EconItemModel> backpackItems, bool groupDuplicates)
         {
@@ -118,7 +118,9 @@ namespace BackpackViewer.Core
                                 items.All(BackpackItem.ItemIsTradable),
                                 BackpackItem.GetBackpackIndex(firstItem.Inventory),
                                 items.Count(),
-                                firstItem.Quality);
+                                firstItem.Quality,
+                                customName: null,
+                                customDescription: null);
                         });
         }
     }
