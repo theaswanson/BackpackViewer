@@ -1,6 +1,7 @@
 ﻿using BackpackViewer.Core.Models;
 using Microsoft.Extensions.Logging;
 using Steam.Models.GameEconomy;
+using SteamWebAPI2.Models.GameEconomy;
 
 namespace BackpackViewer.Core
 {
@@ -49,8 +50,7 @@ namespace BackpackViewer.Core
                         Id = itemGroup.DefIndex.ToString(),
                         Quantity = itemGroup.TotalNumberOfItems,
                         Tradable = itemGroup.Tradable,
-                        // TODO: fix this to include more items than just "tools"
-                        Uses = schemaItem?.ItemTypeName == "Tool" ? Convert.ToInt32(itemGroup.Quantity) : null,
+                        Uses = schemaItem != null && ShouldDisplayQuantity(itemGroup, schemaItem) ? Convert.ToInt32(itemGroup.Quantity) : null,
                         Level = Convert.ToInt32(itemGroup.Level),
                         Name = schemaItem?.ItemName ?? schemaItem?.Name ?? "Unknown item",
                         Description = schemaItem?.ItemDescription ?? "",
@@ -61,6 +61,22 @@ namespace BackpackViewer.Core
                     };
                 })
                 .ToArray();
+        }
+
+        /// <summary>
+        /// Based on IEconTool::ShouldDisplayQuantity from the TF2 source code: https://github.com/ValveSoftware/source-sdk-2013/blob/0565403b153dfcde602f6f58d8f4d13483696a13/src/game/shared/econ/econ_item_tools.cpp#L60-L82
+        /// </summary>
+        private static bool ShouldDisplayQuantity(BackpackItem backpackItem, SchemaItem schemaItem)
+        {
+            if (schemaItem.Attributes != null && schemaItem.Attributes.Any(a => a.Class == "unlimited_quantity"))
+            {
+                return false;
+            }
+
+            var isTool = schemaItem.ItemClass == "tool";
+            var isConsumable = schemaItem.Capabilities.UsableGc == true && backpackItem.Quantity > 0;
+
+            return isTool || isConsumable;
         }
 
         private static ItemQuality MapItemQuality(uint quality)
