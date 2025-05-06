@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { useState } from "react";
 import { Tooltip } from "react-tooltip";
+import { BorderOption } from "./Backpack";
 import Item from "./Item";
 import { ItemDescription } from "./ItemDescription";
 import "./ItemDisplay.css";
@@ -10,6 +11,7 @@ type ItemDisplayProps = {
   items: ItemModel[];
   totalBackpackSlots: number;
   searchTerm: string;
+  borderOption: BorderOption;
 };
 
 const columnsPerPage = 10;
@@ -93,6 +95,7 @@ const ItemDisplay = ({
   items,
   searchTerm,
   totalBackpackSlots,
+  borderOption,
 }: ItemDisplayProps) => {
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -130,10 +133,14 @@ const ItemDisplay = ({
         {renderedItems.map((item, i) => (
           <div key={i}>
             {!item ? (
-              <Item />
+              <Item borderOption={borderOption} />
             ) : (
               <>
-                <Item id={`item-${i}`} item={item} />
+                <Item
+                  id={`item-${i}`}
+                  item={item}
+                  borderOption={borderOption}
+                />
                 <Tooltip
                   anchorSelect={`#item-${i}`}
                   place='top'

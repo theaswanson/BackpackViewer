@@ -1,4 +1,5 @@
-import clsx from "clsx";
+import clsx, { ClassValue } from "clsx";
+import { BorderOption } from "./Backpack";
 import "./Item.css";
 import { ItemModel } from "./models/ItemModel";
 import { ItemQuality } from "./models/ItemQuality";
@@ -7,18 +8,32 @@ import { Pill } from "./Pill";
 interface ItemProps {
   id?: string;
   item?: ItemModel;
+  borderOption: BorderOption;
 }
 
-function Item({ id, item }: ItemProps) {
+const getClassValue = (
+  item: ItemModel | undefined,
+  borderOption: BorderOption
+): ClassValue => {
+  switch (borderOption) {
+    // TODO: handle case for Show marketable borders only
+    case "Show marketable borders only":
+    case "Show quality color borders":
+      return { empty: !item, untradable: item && !item.tradable };
+
+    case "No Item Borders":
+    default:
+      return "empty";
+  }
+};
+
+function Item({ id, item, borderOption }: ItemProps) {
   return (
     <div
       id={id}
       className={clsx(
         "Item",
-        {
-          empty: !item,
-          untradable: item && !item.tradable,
-        },
+        getClassValue(item, borderOption),
         item && ItemQuality[item.quality].toLowerCase()
       )}
     >

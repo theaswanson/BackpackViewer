@@ -50,6 +50,7 @@ export const Backpack = ({
         items={items}
         searchTerm={searchTerm.trim()}
         totalBackpackSlots={totalBackpackSlots}
+        borderOption={borderOption}
       />
     </div>
   );
