@@ -2,6 +2,8 @@ using Microsoft.Extensions.Logging;
 using NSubstitute;
 using System.Text.Json;
 using BackpackViewer.Core;
+using BackpackViewer.Core.Caching;
+using BackpackViewer.Core.Services;
 using Steam.Models.GameEconomy;
 
 namespace BackpackViewer.Tests
@@ -10,14 +12,19 @@ namespace BackpackViewer.Tests
     public class Tf2BackpackLoaderTests
     {
         private Tf2BackpackLoader _backpackLoader;
+        
         private ILogger<Tf2BackpackLoader> _logger;
+        private IBackpackCache _backpackCache;
+        private IItemSchemaCache _itemSchemaCache;
 
         [SetUp]
         public void Setup()
         {
             _logger = Substitute.For<ILogger<Tf2BackpackLoader>>();
+            _backpackCache = Substitute.For<IBackpackCache>();
+            _itemSchemaCache = Substitute.For<IItemSchemaCache>();
 
-            _backpackLoader = new Tf2BackpackLoader(_logger);
+            _backpackLoader = new Tf2BackpackLoader(_backpackCache, _itemSchemaCache, _logger);
         }
 
         [Test]
@@ -40,7 +47,7 @@ namespace BackpackViewer.Tests
         [Test]
         public async Task GivenValidApiKey_GetsItemSchema()
         {
-            var schemaItems = await _backpackLoader.GetSchema(TestConstants.ApiKey);
+            var schemaItems = await _backpackLoader.GetItemSchema(TestConstants.ApiKey);
 
             Assert.That(schemaItems, Is.Not.Empty);
         }
@@ -63,7 +70,7 @@ namespace BackpackViewer.Tests
         [Explicit]
         public async Task DownloadItemSchemaJson()
         {
-            var schemaItems = await _backpackLoader.GetSchema(TestConstants.ApiKey);
+            var schemaItems = await _backpackLoader.GetItemSchema(TestConstants.ApiKey);
 
             Assert.That(schemaItems, Is.Not.Empty);
 

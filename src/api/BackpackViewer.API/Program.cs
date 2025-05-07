@@ -1,4 +1,6 @@
 using BackpackViewer.Core;
+using BackpackViewer.Core.Caching;
+using BackpackViewer.Core.Services;
 
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
@@ -10,8 +12,12 @@ var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 builder.Services.AddControllers();
 
 builder.Services.AddTransient<ITf2BackpackLoader, Tf2BackpackLoader>();
+builder.Services.AddTransient<IMockTf2BackpackLoader, MockTf2BackpackLoader>();
 builder.Services.AddTransient<IItemService, ItemService>();
-
+builder.Services.AddTransient(typeof(ICache<>), typeof(Cache<>));
+builder.Services.AddTransient<IBackpackCache, BackpackCache>();
+builder.Services.AddTransient<IItemSchemaCache, ItemSchemaCache>();
+builder.Services.AddMemoryCache();
 
 // Enable CORS
 // https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-6.0
