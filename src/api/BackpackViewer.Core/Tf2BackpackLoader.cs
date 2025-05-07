@@ -87,14 +87,41 @@ namespace BackpackViewer.Core
         
         private class JsonEconItemResultModel
         {
-            [JsonPropertyName("status")]
             public uint Status { get; set; }
 
-            [JsonPropertyName("num_backpack_slots")]
             public uint NumBackpackSlots { get; set; }
 
-            [JsonPropertyName("items")]
-            public IReadOnlyCollection<EconItemModel> Items { get; set; }
+            public IReadOnlyCollection<JsonEconItemModel> Items { get; set; }
+        }
+        
+        private class JsonEconItemModel
+        {
+            public ulong Id { get; set; }
+
+            public ulong OriginalId { get; set; }
+
+            [JsonPropertyName("defindex")]
+            public uint DefIndex { get; set; }
+
+            public uint Level { get; set; }
+
+            public uint Quality { get; set; }
+
+            public ulong Inventory { get; set; }
+
+            public uint Quantity { get; set; }
+
+            public uint Origin { get; set; }
+
+            public IReadOnlyCollection<EconItemEquippedModel> Equipped { get; set; }
+
+            public uint Style { get; set; }
+
+            public IReadOnlyCollection<EconItemAttributeModel> Attributes { get; set; }
+
+            public bool? FlagCannotTrade { get; set; }
+
+            public bool? FlagCannotCraft { get; set; }
         }
 
         public async Task<EconItemResultModel> GetMockItems(string filePath)
@@ -105,13 +132,40 @@ namespace BackpackViewer.Core
 
             var parsedFile = await JsonSerializer.DeserializeAsync<JsonEconItemResultModel>(
                 new MemoryStream(responseString),
-                options: new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                options: new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower, PropertyNameCaseInsensitive = true });
 
+            if (parsedFile is null)
+            {
+                _logger.LogError("Failed to read mocked file.");
+                
+                return new EconItemResultModel
+                {
+                    Status = 0,
+                    NumBackpackSlots = 0,
+                    Items = []
+                };
+            }
+            
             return new EconItemResultModel
             {
                 Status = parsedFile.Status,
                 NumBackpackSlots = parsedFile.NumBackpackSlots,
-                Items = parsedFile.Items,
+                Items = parsedFile.Items.Select(item => new EconItemModel
+                {
+                    Id = item.Id,
+                    OriginalId = item.OriginalId,
+                    DefIndex = item.DefIndex,
+                    Level = item.Level,
+                    Quality = item.Quality,
+                    Inventory = item.Inventory,
+                    Quantity = item.Quantity,
+                    Origin = item.Origin,
+                    Equipped = item.Equipped,
+                    Style = item.Style,
+                    Attributes = item.Attributes,
+                    FlagCannotTrade = item.FlagCannotTrade,
+                    FlagCannotCraft = item.FlagCannotCraft,
+                }).ToArray(),
             };
         }
 
