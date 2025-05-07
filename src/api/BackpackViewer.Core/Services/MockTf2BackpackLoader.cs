@@ -12,7 +12,6 @@ public class MockTf2BackpackLoader : IMockTf2BackpackLoader
 
     private readonly JsonSerializerOptions _jsonSerializerOptions = new()
     {
-        PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower,
         PropertyNameCaseInsensitive = true
     };
 
@@ -57,7 +56,14 @@ public class MockTf2BackpackLoader : IMockTf2BackpackLoader
                 Origin = item.Origin,
                 Equipped = item.Equipped,
                 Style = item.Style,
-                Attributes = item.Attributes,
+                Attributes = item.Attributes?.Select(x =>
+                    new EconItemAttributeModel
+                    {
+                        AccountInfo = x.AccountInfo,
+                        DefIndex = x.DefIndex,
+                        Value = x.Value,
+                        FloatValue = x.FloatValue,
+                    }).ToArray(),
                 FlagCannotTrade = item.FlagCannotTrade,
                 FlagCannotCraft = item.FlagCannotCraft,
             }).ToArray(),
@@ -87,10 +93,13 @@ public class MockTf2BackpackLoader : IMockTf2BackpackLoader
 
     private class JsonEconItemResultModel
     {
+        [JsonPropertyName("status")]
         public uint Status { get; set; }
 
+        [JsonPropertyName("num_backpack_slots")]
         public uint NumBackpackSlots { get; set; }
 
+        [JsonPropertyName("items")]
         public IReadOnlyCollection<JsonEconItemModel> Items { get; set; }
     }
 
@@ -98,9 +107,11 @@ public class MockTf2BackpackLoader : IMockTf2BackpackLoader
     {
         public ulong Id { get; set; }
 
+        [JsonPropertyName("original_id")]
         public ulong OriginalId { get; set; }
 
-        [JsonPropertyName("defindex")] public uint DefIndex { get; set; }
+        [JsonPropertyName("defindex")]
+        public uint DefIndex { get; set; }
 
         public uint Level { get; set; }
 
@@ -116,10 +127,28 @@ public class MockTf2BackpackLoader : IMockTf2BackpackLoader
 
         public uint Style { get; set; }
 
-        public IReadOnlyCollection<EconItemAttributeModel> Attributes { get; set; }
+        public IReadOnlyCollection<JsonEconItemAttributeModel>? Attributes { get; set; }
 
+        
+        [JsonPropertyName("flag_cannot_trade")]
         public bool? FlagCannotTrade { get; set; }
 
+        [JsonPropertyName("flag_cannot_craft")]
         public bool? FlagCannotCraft { get; set; }
+    }
+    
+    public class JsonEconItemAttributeModel
+    {
+        [JsonPropertyName("defindex")]
+        public uint DefIndex { get; set; }
+
+        [JsonPropertyName("value")]
+        public object Value { get; set; }
+
+        [JsonPropertyName("float_value")]
+        public double FloatValue { get; set; }
+
+        [JsonPropertyName("account_info")]
+        public EconItemAttributeAccountInfoModel AccountInfo { get; set; }
     }
 }

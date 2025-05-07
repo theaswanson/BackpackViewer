@@ -4,6 +4,8 @@ using System.Text.Json;
 using BackpackViewer.Core.Caching;
 using BackpackViewer.Core.Services;
 using Steam.Models.GameEconomy;
+using SteamWebAPI2.Models.GameEconomy;
+using SteamWebAPI2.Utilities;
 
 namespace BackpackViewer.Tests
 {
@@ -20,8 +22,13 @@ namespace BackpackViewer.Tests
         public void Setup()
         {
             _logger = Substitute.For<ILogger<Tf2BackpackLoader>>();
+            
             _backpackCache = Substitute.For<IBackpackCache>();
+            _backpackCache.Get(default)
+                .ReturnsForAnyArgs(CacheResult<ISteamWebResponse<EconItemResultModel>>.NotFound());
+            
             _itemSchemaCache = Substitute.For<IItemSchemaCache>();
+            _itemSchemaCache.Get().ReturnsForAnyArgs(CacheResult<SchemaItem[]>.NotFound());
 
             _backpackLoader = new Tf2BackpackLoader(_backpackCache, _itemSchemaCache, _logger);
         }
