@@ -1,4 +1,3 @@
-using BackpackViewer.Core;
 using BackpackViewer.Core.Caching;
 using BackpackViewer.Core.Services;
 

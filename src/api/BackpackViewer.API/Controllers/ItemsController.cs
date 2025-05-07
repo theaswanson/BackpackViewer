@@ -1,4 +1,3 @@
-using BackpackViewer.Core;
 using BackpackViewer.Core.Models;
 using BackpackViewer.Core.Services;
 using Microsoft.AspNetCore.Mvc;

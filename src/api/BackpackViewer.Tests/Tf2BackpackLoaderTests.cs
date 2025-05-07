@@ -1,7 +1,6 @@
 using Microsoft.Extensions.Logging;
 using NSubstitute;
 using System.Text.Json;
-using BackpackViewer.Core;
 using BackpackViewer.Core.Caching;
 using BackpackViewer.Core.Services;
 using Steam.Models.GameEconomy;
