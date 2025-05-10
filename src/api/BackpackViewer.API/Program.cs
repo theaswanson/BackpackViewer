@@ -1,3 +1,4 @@
+using System.Threading.RateLimiting;
 using BackpackViewer.Core.Caching;
 using BackpackViewer.Core.Services;
 
@@ -17,6 +18,22 @@ builder.Services.AddTransient(typeof(ICache<>), typeof(Cache<>));
 builder.Services.AddTransient<IBackpackCache, BackpackCache>();
 builder.Services.AddTransient<IItemSchemaCache, ItemSchemaCache>();
 builder.Services.AddMemoryCache();
+builder.Services.AddRateLimiter(options =>
+{
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+
+    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(httpContext =>
+        RateLimitPartition.GetFixedWindowLimiter(
+            partitionKey: httpContext.User.Identity?.Name ?? httpContext.Connection.RemoteIpAddress?.ToString() ??
+            httpContext.Request.Headers.Host.ToString(),
+            factory: _ => new FixedWindowRateLimiterOptions
+            {
+                AutoReplenishment = true,
+                PermitLimit = 10,
+                QueueLimit = 0,
+                Window = TimeSpan.FromMinutes(1)
+            }));
+});
 
 // Enable CORS
 // https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-6.0
@@ -39,6 +56,7 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 app.UseCors(corsPolicyName);
 app.UseAuthorization();
+app.UseRateLimiter();
 app.MapControllers();
 
 app.Run();
