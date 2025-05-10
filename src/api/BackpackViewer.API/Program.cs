@@ -2,62 +2,74 @@ using System.Threading.RateLimiting;
 using BackpackViewer.Core.Caching;
 using BackpackViewer.Core.Services;
 
-var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+namespace BackpackViewer.API;
+
+internal static class Program
 {
-    Args = args,
-    WebRootPath = "www"
-});
+    public static async Task Main(string[] args) =>
+        await BuildApp(args, AppConstants.CorsPolicyName).RunAsync();
 
-// Add services to the container.
-builder.Services.AddControllers();
-
-builder.Services.AddTransient<ITf2BackpackLoader, Tf2BackpackLoader>();
-builder.Services.AddTransient<IMockTf2BackpackLoader, MockTf2BackpackLoader>();
-builder.Services.AddTransient<IItemService, ItemService>();
-builder.Services.AddTransient(typeof(ICache<>), typeof(Cache<>));
-builder.Services.AddTransient<IBackpackCache, BackpackCache>();
-builder.Services.AddTransient<IItemSchemaCache, ItemSchemaCache>();
-builder.Services.AddMemoryCache();
-builder.Services.AddRateLimiter(options =>
-{
-    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
-
-    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(httpContext =>
-        RateLimitPartition.GetFixedWindowLimiter(
-            partitionKey: httpContext.User.Identity?.Name ?? httpContext.Connection.RemoteIpAddress?.ToString() ??
-            httpContext.Request.Headers.Host.ToString(),
-            factory: _ => new FixedWindowRateLimiterOptions
-            {
-                AutoReplenishment = true,
-                PermitLimit = 10,
-                QueueLimit = 0,
-                Window = TimeSpan.FromMinutes(1)
-            }));
-});
-
-// Enable CORS
-// https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-6.0
-
-var corsPolicyName = "CORS-LocalReact";
-
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy(name: corsPolicyName, policy =>
+    private static WebApplication BuildApp(string[] args, string corsPolicyName)
     {
-        policy.WithOrigins("http://localhost:5173", "https://localhost:5173");
-    });
-});
+        var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+        {
+            Args = args,
+            WebRootPath = "www"
+        }).ConfigureServices(corsPolicyName);
+        
+        var app = builder.Build();
+        
+        return app.Configure(corsPolicyName);
+    }
 
-builder.Services.AddCors();
+    private static WebApplicationBuilder ConfigureServices(this WebApplicationBuilder builder, string corsPolicyName)
+    {
+        builder.Services.AddControllers();
 
-var app = builder.Build();
+        builder.Services
+            .AddTransient<ITf2BackpackLoader, Tf2BackpackLoader>()
+            .AddTransient<IMockTf2BackpackLoader, MockTf2BackpackLoader>()
+            .AddTransient<IItemService, ItemService>()
+            .AddTransient(typeof(ICache<>), typeof(Cache<>))
+            .AddTransient<IBackpackCache, BackpackCache>()
+            .AddTransient<IItemSchemaCache, ItemSchemaCache>();
 
-// Configure the HTTP request pipeline.
-app.UseHttpsRedirection();
-app.UseCors(corsPolicyName);
-app.UseAuthorization();
-app.UseRateLimiter();
-app.MapControllers();
+        builder.Services.AddMemoryCache();
+        builder.Services.AddRateLimiter(options =>
+        {
+            options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
 
-app.Run();
+            options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(httpContext =>
+                RateLimitPartition.GetFixedWindowLimiter(
+                    partitionKey: httpContext.User.Identity?.Name ??
+                                  httpContext.Connection.RemoteIpAddress?.ToString() ??
+                                  httpContext.Request.Headers.Host.ToString(),
+                    factory: _ => new FixedWindowRateLimiterOptions
+                    {
+                        AutoReplenishment = true,
+                        PermitLimit = 10,
+                        QueueLimit = 0,
+                        Window = TimeSpan.FromMinutes(1)
+                    }));
+        });
 
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy(corsPolicyName,
+                policy => { policy.WithOrigins("http://localhost:5173", "https://localhost:5173"); });
+        });
+
+        return builder;
+    }
+
+    private static WebApplication Configure(this WebApplication app, string corsPolicyName)
+    {
+        app.UseHttpsRedirection();
+        app.UseCors(corsPolicyName);
+        app.UseAuthorization();
+        app.UseRateLimiter();
+        app.MapControllers();
+
+        return app;
+    }
+}
