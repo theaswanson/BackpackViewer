@@ -1,11 +1,10 @@
 ﻿using Steam.Models.GameEconomy;
 using SteamWebAPI2.Models.GameEconomy;
 
-namespace BackpackViewer.Core.Services
+namespace BackpackViewer.Core.Services;
+
+public interface ITf2BackpackLoader
 {
-    public interface ITf2BackpackLoader
-    {
-        Task<EconItemResultModel> GetItems(string apiKey, ulong steamId);
-        Task<IEnumerable<SchemaItem>> GetItemSchema(string apiKey);
-    }
+    Task<EconItemResultModel> GetItems(string apiKey, ulong steamId);
+    Task<IEnumerable<SchemaItem>> GetItemSchema(string apiKey);
 }
