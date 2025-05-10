@@ -1,6 +1,13 @@
 name: API - Production
 
-on: [push, workflow_dispatch]
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/api/**'
+      - '.github/workflows/api.yaml'
+  workflow_dispatch:
 
 permissions:
   id-token: write

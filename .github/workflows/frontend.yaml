@@ -1,0 +1,63 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Frontend - Production
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/frontend/**"
+      - '.github/workflows/frontend.yaml'
+  workflow_dispatch:
+
+# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          cache-dependency-path: ./src/frontend/package-lock.json
+          node-version: lts/*
+          cache: "npm"
+      - name: Install dependencies
+        working-directory: ./src/frontend
+        run: npm ci
+      - name: Replace tokens
+        uses: cschleiden/replace-tokens@v1
+        with:
+          tokenPrefix: "#{"
+          tokenSuffix: "}#"
+          files: '["./src/frontend/.env"]'
+        env:
+          VITE_API_URL: https://tf2backpackviewer-g5hchzh2f6dud6ak.eastus-01.azurewebsites.net
+      - name: Build
+        working-directory: ./src/frontend
+        run: npm run build
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload dist folder
+          path: "./src/frontend/dist"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
