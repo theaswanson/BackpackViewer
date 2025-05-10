@@ -2,5 +2,6 @@
 
 internal static class AppConstants
 {
-    public const string CorsPolicyName = "CORS-LocalReact";
+    public const string LocalCorsPolicyName = "CORS-LocalReact";
+    public const string CorsPolicyName = "CORS-GitHub";
 }

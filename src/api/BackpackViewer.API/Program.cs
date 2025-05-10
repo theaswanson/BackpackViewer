@@ -7,22 +7,22 @@ namespace BackpackViewer.API;
 internal static class Program
 {
     public static async Task Main(string[] args) =>
-        await BuildApp(args, AppConstants.CorsPolicyName).RunAsync();
+        await BuildApp(args).RunAsync();
 
-    private static WebApplication BuildApp(string[] args, string corsPolicyName)
+    private static WebApplication BuildApp(string[] args)
     {
         var builder = WebApplication.CreateBuilder(new WebApplicationOptions
         {
             Args = args,
             WebRootPath = "www"
-        }).ConfigureServices(corsPolicyName);
+        }).ConfigureServices();
         
         var app = builder.Build();
         
-        return app.Configure(corsPolicyName);
+        return app.Configure();
     }
 
-    private static WebApplicationBuilder ConfigureServices(this WebApplicationBuilder builder, string corsPolicyName)
+    private static WebApplicationBuilder ConfigureServices(this WebApplicationBuilder builder)
     {
         builder.Services.AddControllers();
 
@@ -53,19 +53,32 @@ internal static class Program
                     }));
         });
 
-        builder.Services.AddCors(options =>
+        if (builder.Environment.IsDevelopment())
         {
-            options.AddPolicy(corsPolicyName,
-                policy => { policy.WithOrigins("http://localhost:5173", "https://localhost:5173"); });
-        });
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(AppConstants.LocalCorsPolicyName,
+                    policy => policy.WithOrigins("http://localhost:5173", "https://localhost:5173"));
+            });
+        }
+        else
+        {
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(AppConstants.CorsPolicyName,
+                    policy => policy.WithOrigins("https://theaswanson.github.io"));
+            });
+        }
 
         return builder;
     }
 
-    private static WebApplication Configure(this WebApplication app, string corsPolicyName)
+    private static WebApplication Configure(this WebApplication app)
     {
         app.UseHttpsRedirection();
-        app.UseCors(corsPolicyName);
+        app.UseCors(app.Environment.IsDevelopment()
+            ? AppConstants.LocalCorsPolicyName
+            : AppConstants.CorsPolicyName);
         app.UseAuthorization();
         app.UseRateLimiter();
         app.MapControllers();
