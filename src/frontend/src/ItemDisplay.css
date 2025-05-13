@@ -6,15 +6,26 @@
 
 .Table {
   display: grid;
-  grid-template-columns: repeat(10, 135px);
-  gap: 0.5rem 1rem;
+  grid-template-columns: repeat(auto-fit, var(--tf2-backpack-item-width));
+  justify-content: center;
+  gap: var(--tf2-backpack-row-gap) var(--tf2-backpack-column-gap);
 }
 
 .paging {
   display: grid;
-  grid-template-columns: repeat(20, 62px);
+  grid-template-columns: repeat(
+    auto-fit,
+    var(--tf2-backpack-page-button-width)
+  );
 
-  gap: 0.7rem;
+  gap: var(--tf2-backpack-page-button-gap);
+}
+
+/* TODO: use variable --mobile-width */
+@media screen and (max-width: 1040px) {
+  .paging {
+    justify-content: center;
+  }
 }
 
 .pageButton {
@@ -22,12 +33,13 @@
   border: none;
   border-radius: 0.75rem;
   color: #ece5c8;
-  height: 35px;
-  width: 62px;
+  height: var(--tf2-backpack-page-button-height);
+  width: var(--tf2-backpack-page-button-width);
+  font-size: var(--tf2-backpack-page-button-font-size);
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.7rem;
+  padding: 0;
 }
 
 .pageButton.partial {

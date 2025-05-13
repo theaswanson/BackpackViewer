@@ -4,13 +4,14 @@
   border: 3px var(--item-border-color) solid;
   border-radius: 0.6rem;
   background-color: #221e1b;
-  width: 135px;
-  height: 100px;
+  width: var(--tf2-backpack-item-width);
+  height: var(--tf2-backpack-item-height);
+  box-sizing: border-box;
 }
 
 .Item img {
-  width: 135px;
-  height: 100px;
+  width: var(--tf2-backpack-item-width);
+  height: var(--tf2-backpack-item-height);
   object-fit: cover;
 }
 

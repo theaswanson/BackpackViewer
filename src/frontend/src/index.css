@@ -19,6 +19,7 @@
 }
 
 :root {
+  /* Colors */
   --tf2-colors-normal: #b2b2b2;
   --tf2-colors-unique: #ffd700;
   --tf2-colors-vintage: #476291;
@@ -31,6 +32,29 @@
   --tf2-colors-community: #70b04a;
   --tf2-colors-selfmade: #70b04a;
   --tf2-colors-valve: #a50f79;
+  --tf2-colors-backpack-background: #2b2724;
+
+  /* Sizing */
+  --tf2-backpack-item-width: 162px;
+  --tf2-backpack-item-height: 126px;
+  --tf2-backpack-max-columns: 10;
+  --tf2-backpack-row-gap: 0.5rem;
+  --tf2-backpack-column-gap: 0.6rem;
+  --tf2-backpack-max-width: 1710px;
+
+  --tf2-backpack-page-button-width: 75px;
+  --tf2-backpack-page-button-height: 40px;
+  --tf2-backpack-page-button-font-size: 1.9rem;
+  --tf2-backpack-page-button-gap: 10px;
+  /* --tf2-backpack-max-width: calc(
+    var(--tf2-backpack-item-width) * var(--tf2-backpack-max-columns) +
+      calc(var(--tf2-backpack-max-columns) - 1) * var(--tf2-backpack-column-gap)
+  ); */
+
+  /* Currently unused since native css doesn't support variables in @media queries (sadge). */
+  --mobile-width: 1040px;
+
+  background-color: var(--tf2-colors-backpack-background);
 }
 
 body {
