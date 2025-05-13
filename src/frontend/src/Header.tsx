@@ -30,19 +30,21 @@ export const Header = ({
     </div>
 
     <div className='options'>
-      <div className='stock-and-borders'>
+      <div className='row'>
+        <div style={{ width: "565px" }} />
+
+        <Search
+          searchTerm={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </div>
+
+      <div className='row'>
         <CustomSelect
           options={BorderOptions}
           selected={borderOption}
           onSelect={setBorderOption}
           style={{ width: "565px" }}
-        />
-      </div>
-
-      <div className='search-and-sort'>
-        <Search
-          searchTerm={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
         />
 
         <CustomSelect
