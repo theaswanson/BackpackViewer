@@ -31,7 +31,7 @@ export const Header = ({
 
     <div className='options'>
       <div className='row'>
-        <div style={{ width: "565px" }} />
+        <div className='spacer' />
 
         <Search
           searchTerm={searchTerm}
@@ -44,14 +44,14 @@ export const Header = ({
           options={BorderOptions}
           selected={borderOption}
           onSelect={setBorderOption}
-          style={{ width: "565px" }}
+          className='border-options'
         />
 
         <CustomSelect
           options={SortOptions}
           selected={sortOption}
           onSelect={setSortOption}
-          style={{ width: "400px" }}
+          className='sort-options'
         />
       </div>
     </div>

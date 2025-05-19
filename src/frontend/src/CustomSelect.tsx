@@ -15,6 +15,7 @@ interface IProps<T> {
   options: readonly T[];
   selected?: T;
   onSelect: (option: T) => void;
+  className?: string;
   style?: CSSProperties;
 }
 
@@ -22,12 +23,13 @@ export const CustomSelect = <T extends string>({
   options,
   selected,
   onSelect,
+  className,
   style,
 }: IProps<T>) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className='select' style={style}>
+    <div className={className ? `${className} select` : "select"} style={style}>
       <div
         className='select-option main'
         onClick={() => setIsOpen((open) => !open)}
