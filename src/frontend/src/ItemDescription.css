@@ -14,12 +14,6 @@
   width: 984px;
 }
 
-@media screen and (max-width: 984px) {
-  .item-desc {
-    width: 90vw;
-  }
-}
-
 .item-desc .title {
   display: flex;
   flex-direction: column;
@@ -94,4 +88,23 @@
 
 .item-desc .limited-use {
   color: #1b931a;
+}
+
+@media screen and (max-width: 984px) {
+  .item-desc {
+    padding: 1rem 3.5rem;
+    width: 90vw;
+  }
+
+  .item-desc h1 {
+    font-size: calc(2rem * 0.75);
+  }
+
+  .item-desc h2 {
+    font-size: calc(1.9rem * 0.75);
+  }
+
+  .item-desc p {
+    font-size: calc(1.8rem * 0.75);
+  }
 }
