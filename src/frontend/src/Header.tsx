@@ -4,9 +4,10 @@ import {
   SortOption,
   SortOptions,
 } from "./Backpack";
+import { HeaderText } from "./components/HeaderText";
+import { Input } from "./components/Input";
 import { CustomSelect } from "./CustomSelect";
 import "./Header.css";
-import { Search } from "./Search";
 
 export const Header = ({
   searchTerm,
@@ -24,17 +25,19 @@ export const Header = ({
   setSortOption: (option: SortOption) => void;
 }) => (
   <div className='header-wrapper'>
-    <div className='header'>
-      <span>{">>"}</span>
-      <h1>BACKPACK</h1>
-    </div>
+    <HeaderText
+      className='header'
+      title='Backpack'
+      titlePrefix={<span className='header-prefix'>{">>"}</span>}
+    />
 
     <div className='options'>
       <div className='row'>
         <div className='spacer' />
 
-        <Search
-          searchTerm={searchTerm}
+        <Input
+          label='Search:'
+          value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>

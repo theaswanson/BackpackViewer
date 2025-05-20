@@ -1,0 +1,12 @@
+.header-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #ece5c8;
+  }
+}

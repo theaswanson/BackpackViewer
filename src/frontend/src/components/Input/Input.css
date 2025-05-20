@@ -1,14 +1,17 @@
-.search {
+.input-group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.search h3 {
+.input-group label {
   color: #867d6d;
+  font-family: "TF2 Build";
+  font-size: 25px;
+  font-weight: 500;
 }
 
-.search input {
+.input-group input {
   background-color: #fbeccb;
   border: none;
   outline: none;
