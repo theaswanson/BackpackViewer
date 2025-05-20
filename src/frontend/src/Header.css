@@ -13,11 +13,12 @@
 .header-wrapper .options .row {
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
   gap: 0.5rem 3rem;
   flex-wrap: wrap;
 }
 
-.spacer {
+.show-stock-items {
   width: var(--tf2-backpack-border-option-width);
 }
 
@@ -31,10 +32,6 @@
 
 /* TODO: use variable --mobile-width */
 @media screen and (max-width: 1040px) {
-  .spacer {
-    display: none;
-  }
-
   .header-wrapper {
     flex-direction: column;
     align-items: center;
@@ -52,6 +49,10 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+  }
+
+  .show-stock-items {
+    width: 100%;
   }
 
   .border-options {

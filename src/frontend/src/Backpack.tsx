@@ -28,6 +28,8 @@ export const Backpack = ({
   items: ItemModel[];
   totalBackpackSlots: number;
 }) => {
+  const [showStockItems, setShowStockItems] = useState(false);
+
   const [searchTerm, setSearchTerm] = useState<string>("");
 
   const [borderOption, setBorderOption] = useState<BorderOption>(
@@ -39,6 +41,8 @@ export const Backpack = ({
   return (
     <div className='backpack'>
       <Header
+        showStockItems={showStockItems}
+        setShowStockItems={setShowStockItems}
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         borderOption={borderOption}

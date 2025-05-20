@@ -4,12 +4,15 @@ import {
   SortOption,
   SortOptions,
 } from "./Backpack";
+import { Checkbox } from "./components/Checkbox";
 import { HeaderText } from "./components/HeaderText";
 import { Input } from "./components/Input";
 import { CustomSelect } from "./CustomSelect";
 import "./Header.css";
 
 export const Header = ({
+  showStockItems,
+  setShowStockItems,
   searchTerm,
   setSearchTerm,
   borderOption,
@@ -17,6 +20,8 @@ export const Header = ({
   sortOption,
   setSortOption,
 }: {
+  showStockItems: boolean;
+  setShowStockItems: (value: boolean) => void;
   searchTerm: string;
   setSearchTerm: (value: string) => void;
   borderOption: BorderOption;
@@ -33,7 +38,13 @@ export const Header = ({
 
     <div className='options'>
       <div className='row'>
-        <div className='spacer' />
+        <div className='show-stock-items'>
+          <Checkbox
+            label='Show stock items'
+            isChecked={showStockItems}
+            onChange={(e) => setShowStockItems(e.target.checked)}
+          />
+        </div>
 
         <Input
           label='Search:'

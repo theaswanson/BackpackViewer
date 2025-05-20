@@ -5,6 +5,7 @@ import { ItemModel } from "./models/ItemModel";
 import { ItemResponse } from "./models/ItemResponse";
 
 import "./App.css";
+import { Checkbox } from "./components/Checkbox";
 import { HeaderText } from "./components/HeaderText";
 import { Input } from "./components/Input";
 import { ItemQuality } from "./models/ItemQuality";
@@ -86,7 +87,17 @@ function App() {
       <header className='App-header'>
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
           <HeaderText title='Settings' />
-          <div>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "flex-end",
+              justifyContent: "center",
+              gap: "2rem",
+              flexWrap: "wrap",
+            }}
+          >
             <Input
               id='steamId'
               type='number'
@@ -95,21 +106,20 @@ function App() {
               value={steamId}
               onChange={(e) => setSteamId(e.target.value)}
             />
-          </div>
-          <div>
-            <label htmlFor='useMockResponse'>Use mock response</label>
-            <input
-              type='checkbox'
-              id='useMockResponse'
-              checked={useMockResponse}
+
+            <Checkbox
+              label='Use mock response'
+              isChecked={useMockResponse}
               onChange={(e) => setUseMockResponse(e.target.checked)}
             />
           </div>
+
           <button onClick={loadItems} disabled={loading}>
             Get Items
           </button>
         </div>
       </header>
+
       <Backpack items={backpackItems} totalBackpackSlots={totalBackpackSlots} />
     </div>
   );
