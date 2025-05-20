@@ -5,6 +5,8 @@ import { ItemModel } from "./models/ItemModel";
 import { ItemResponse } from "./models/ItemResponse";
 
 import "./App.css";
+import { HeaderText } from "./components/HeaderText";
+import { Input } from "./components/Input";
 import { ItemQuality } from "./models/ItemQuality";
 
 const getQualityName = (quality: ItemQuality) => {
@@ -83,11 +85,13 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+          <HeaderText title='Settings' />
           <div>
-            <label htmlFor='steamId'>Steam ID</label>
-            <input
+            <Input
               id='steamId'
               type='number'
+              min={0}
+              label='Steam ID'
               value={steamId}
               onChange={(e) => setSteamId(e.target.value)}
             />
