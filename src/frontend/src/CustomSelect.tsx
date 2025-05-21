@@ -1,5 +1,5 @@
 import { CSSProperties, HTMLAttributes, ReactNode, useState } from "react";
-import { Chevron } from "./Chevron";
+import { Chevron } from "./components/Chevron";
 import "./CustomSelect.css";
 
 const SelectOption = ({

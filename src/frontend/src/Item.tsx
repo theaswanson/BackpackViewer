@@ -1,9 +1,9 @@
 import clsx, { ClassValue } from "clsx";
 import { BorderOption } from "./Backpack";
+import { Pill } from "./components/Pill";
 import "./Item.css";
 import { ItemModel } from "./models/ItemModel";
 import { ItemQuality } from "./models/ItemQuality";
-import { Pill } from "./Pill";
 
 interface ItemProps {
   id?: string;

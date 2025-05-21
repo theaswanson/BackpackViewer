@@ -5,6 +5,7 @@ import { ItemModel } from "./models/ItemModel";
 import { ItemResponse } from "./models/ItemResponse";
 
 import "./App.css";
+import { Button } from "./components/Button";
 import { Checkbox } from "./components/Checkbox";
 import { HeaderText } from "./components/HeaderText";
 import { Input } from "./components/Input";
@@ -38,6 +39,9 @@ const getItemDisplayName = (item: ItemResponse): string => {
       return item.name;
   }
 };
+
+const invalidSteamId = (steamId: string | undefined) =>
+  !steamId || steamId.trim() === "0";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -114,9 +118,12 @@ function App() {
             />
           </div>
 
-          <button onClick={loadItems} disabled={loading}>
+          <Button
+            onClick={loadItems}
+            disabled={loading || invalidSteamId(steamId)}
+          >
             Get Items
-          </button>
+          </Button>
         </div>
       </header>
 
