@@ -18,6 +18,11 @@
   src: url("./assets/tf2secondary.ttf");
 }
 
+@font-face {
+  font-family: "Marlett";
+  src: url("./assets/marlett.ttf");
+}
+
 :root {
   /* Colors */
   --tf2-colors-normal: #b2b2b2;
